@@ -1,0 +1,342 @@
+/**********辅助设计**********/
+	#main,#abroad_travel,#home_travel,#surroundings,#cruise,#local_fun,#cooperation,#foot_banner,#travel_strategy,#address,#footer{
+		height:200px;
+		width:1440px;
+		border:1px solid black;
+	}
+/**********携程网站首页通用样式**********/
+	html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,fieldset,legend,input,textarea,p,th,td,em,button{
+		margin:0;
+		padding:0;
+		list-style:none;
+		font-family:Arial,tahoma,verdana,"Microsoft YaHei",Simsun,sans-serif;
+	}
+	a{
+		text-decoration:none;
+		color:#333333;
+	}
+	a:hover{
+		text-decoration:underline;
+	}
+	.lf{
+		float:left;
+	}
+	.rt{
+		float:right;
+	}
+	.clear:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.out:before{
+		content:"";
+		display:table;
+	}
+	#header,#nav,#banner,#main,#abroad_travel,#home_travel,#surroundings,#cruise,#local_fun,#cooperation,#foot_banner,#travel_strategy,#address,#footer{
+		margin:0 auto;
+	}
+/*************网页头部信息***********************/
+	#header{
+		height:65px;
+		width:1180px;
+		font-size:12px;
+	}
+/*logo部分*/
+	#header a.lf{
+		margin:11px 0;
+	}
+/*客服中心部分*/
+	#header div.rt{
+		width:410px;
+		height:38px;
+	}
+	#header div.rt u{
+		text-decoration:none;
+	}
+/*global部分*/
+	span.sites>a{
+		float:left;
+		position:relative;
+		display:inline-block;
+		height:27px;
+		width:90px;
+		margin:19px 0px;
+		padding-left:28px;
+		line-height:27px;
+		border:1px solid transparent;
+		border-bottom:none;
+		background:url(images/un_header_footer20160610.png) no-repeat -58px 4px;
+		background-color:#fff;
+	}
+	span.sites a s.sanjiaoxing01{
+		display:inline-block;
+		width:8px;
+		height:8px;
+		margin:0px;
+		background:url(images/un_header_footer20160610.png) no-repeat -64px -258px;
+	}
+/*第一部分下拉列表定位*/
+	span.sites{
+		position:relative;
+	}
+	#sub_sites{
+		position:absolute;
+		top:46px;
+		left:0px;
+		width:150px;
+		min-height:300px;
+		border:1px solid #B8B8B8;
+		background-color:#fff;
+		display:none;
+	}
+/*第一个下拉列表详细内容*/
+	#sub_sites ul li{
+		padding:15px;
+		border-bottom:1px dotted #E4E7EB;
+	}
+	#xg b{
+		display:block;
+		height:13px;
+		width:24px;
+		background:url(images/un_header_footer20160610.png) no-repeat;
+	}
+	#xg b.b01{
+		background-position:0px 0px;
+	}
+	#xg b.b02{
+		background-position:0px -20px;
+	}
+	#xg b.b03{
+		background-position:0px -319px;
+	}
+	#xg b.b04{
+		background-position:-60px -472px;
+	}
+	#xg b.b05{
+		background-position:0px -320px;
+	}
+	#xg b.b06{
+		background-position:0px -39px;
+	}
+	#xg b.b07{
+		background-position:0px -338px;
+	}
+	#xg b.b08{
+		background-position:0px -357px;
+	}
+	#xg b.b09{
+		background-position:0px -376px;
+	}
+	#xg b.b10{
+		background-position:0px -394px;
+	}
+	#xg b.b12{
+		background-position:0px -412px;
+	}
+	#xg b.b13{
+		background-position:-60px -523px;
+	}
+	span.sites:hover a{
+		border-color:#B8B8B8;
+		text-decoration:none;
+		/*层叠，在下拉列表之上*/
+		z-index:30;
+	} 
+	span.sites:hover s.sanjiaoxing01{
+		background:url(images/un_header_footer20160610.png) no-repeat 0px -260px;
+	}
+	span.sites:hover #sub_sites{
+		display:block;
+		z-index:1;
+	}
+	#sub_sites li:hover{
+		background-color:#F5F5F5;
+	}
+/*分隔符*/
+	div.rt u.lf{
+		height:20px;
+		width:5px;
+		margin:20px 5px;
+		border-left:1px solid #b2b2b2;
+	}
+/*第二个小项*/
+	div.rt>a.lf{
+		display:block;
+		padding:13px 5px;
+	}
+/*第三个小项*/
+	div.rt>div.phone{
+		/*相对定位，配合下拉列表*/
+		position:relative;
+	}
+	div.rt>div.phone a{
+		display:block;
+		box-sizing:border-box;
+		padding:5px;
+		border:1px solid transparent;
+		border-bottom:none;
+		position:relative;
+		top:19px;
+		left:-6px;
+		background-color:#fff;
+	}
+	div.rt>div.phone s.sanjiaoxing02{
+		display:inline-block;
+		margin:0 5px;
+		width:7px;
+		height:4px;
+		background:url(images/un_header_footer20160610.png) no-repeat -23px -264px;
+	}
+	div.phone u{
+		color:#176FD7;
+	}
+/*电话一列的下拉表*/
+	#sub_phone{
+		position:absolute;
+		top:45px;
+		left:-20px;
+		box-sizing:border-box;
+		width:160px;
+		height:100px;
+		border:1px solid #B8B8B8;
+		line-height:20px;
+		text-align:right;
+		padding:5px;
+		background-color:#fff;
+		display:none;
+	}
+	div.rt>div.phone:hover s.sanjiaoxing02{
+		background:url(images/un_header_footer20160610.png) no-repeat -23px -260px;
+	}
+	div.rt>div.phone:hover a{
+		text-decoration:none;
+		border-color:#B8B8B8;
+		z-index:30;
+	}
+	div.rt>div.phone:hover #sub_phone{
+		display:block;
+		z-index:10;
+	}
+/*手机*/
+	p.mobile{
+		display:block;
+		position:relative;
+		top:25px;
+		left:0px;
+		height:17px;
+		width:11px;
+		background:url(images/un_header_footer20160610.png) no-repeat 0px -56px;
+	}
+	p.mobile:hover{
+		background-position:0px -78px;
+	}
+/*微信*/
+	p.wechat{
+		height:15px;
+		width:20px;
+		margin:24px 0 24px 15px;
+		background:url(images/un_header_footer20160610.png) no-repeat -20px -56px;
+	}
+	p.wechat:hover{
+		background-position:-20px -78px;
+	}
+/***************nav导航栏部分********************/
+	/*通用导航下拉三角*/
+	#nav i{
+		display:block;
+		width:0px;
+		height:0px;
+		border:5px solid transparent;
+		border-top-color:#fff;
+		margin-top:-13px;
+		margin-left:40px;
+	}
+	#nav{
+		margin-top:3px;
+		width:1180px;
+		height:40px;
+		background:#2577E3;
+	}
+	#nav>ul>li{
+		float:left;			
+	}
+	#nav>ul>li a.last{
+		border:none;
+	}
+	#nav>ul>li a{
+		height:20px;
+		display:block;
+		line-height:20px;
+		margin-top:10px;
+		margin-bottom:10px;
+		font-size:16px;	
+		color:#fff;
+		text-decoration:none;
+		padding:0 5px;
+		border-right:1px solid #1D67DD;
+	}
+	#nav>ul>li a.san{
+		padding-right:5px;
+	}
+	#nav>ul>li a.san i{
+		margin-left:55px;
+	}
+	/*导航栏下部信息*/
+	#sub_nav{
+		box-sizing:border-box;
+		width:1180px;
+		height:38px;
+		border:1px solid #2577E3;
+		border-top:none;
+		margin:0 auto;
+		margin-bottom:15px;
+	}
+	#sub_nav ul{
+		float:left;
+		font-size:14px;
+		padding-left:10px;
+	}
+	#sub_nav ul li{
+		float:left;
+		line-height:38px;
+	}
+	#sub_nav ul li a{
+		padding:0 5px;
+		border-left:1px solid #ccc;
+		text-decoration:none;
+	}
+	#sub_nav ul li.first a{
+		border:none;
+		color:#2577E3;
+	}
+/***************banner广告部分*****************/
+	#banner{
+		height:368px;
+		width:1184px;
+		margin:10px auto;
+	}
+	#banner a.lf{
+		float:left;
+		height:260px;
+		width:348px;
+	}
+	#banner a.center{
+		float:left;
+		height:260px;
+		width:424px;
+	}
+	#banner a.righttop{
+		height:129px;
+		width:404px;
+	}
+	#banner a.rightbottom{
+		height:129px;
+		width:404px;
+	}
+	#banner p.rt{
+		height:260px;
+		width:404px;
+	}
+
+
