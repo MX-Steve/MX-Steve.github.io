@@ -1,0 +1,206 @@
+/****网页通用css样式****/
+	a{
+		text-decoration:none;
+		color:#4C4C4C;
+		font-size:12px;
+	}
+	p,ul,li,table,tr,td,input{
+		padding:0;
+		margin:0;
+		list-style:none;
+	}
+	#header,#section,#aside,#footer{
+		margin:0 auto;
+		font-size:12px;
+	}
+	.lf{float:left;}
+	.rt{float:right;}
+	.clear:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+/****网页头部header信息****/
+	#header{
+		height:45px;
+		width:1180px;
+		box-sizing:border-box;
+	}
+	#header a{
+		margin:16px 0;
+		padding:0 5px;
+	}
+	#header a.login{
+		color:#0066CC;
+		border-right:1px solid #CACACA;
+	}
+/****网页主题section信息****/
+	#section{
+		width:750px;
+		height:424px;
+		float:left;
+		clear:both;
+		margin-left:200px;
+		margin-bottom:100px;
+	}
+	/*进度条*/
+	#section ul.procedure{
+		width:750px;
+		height:20px;
+		margin:10px 0;
+		box-sizing:border-box;
+	}
+	#section ul.procedure li{
+		height:20px;
+		width:250px;
+		color:#ddd;
+		float:left;
+		position:relative;
+	}
+	#section ul.procedure li.current{
+		color:#ACD252;
+	}
+	#section ul.procedure li u.line{
+		display:inline-block;
+		height:5px;
+		width:196px;
+		background-color:#DDD;
+	}
+	#section ul.procedure li.current u.line{
+		background-color:#ACD252;
+	}
+	#section ul.procedure li i.circle{
+		display:inline-block;
+		height:15px;
+		width:15px;
+		background:url(images/un_reg.png) no-repeat 0 -287px;
+		position:absolute;
+		top:0px;
+		right:54px;
+	}
+	#section ul.procedure li.current i.circle{
+		background:url(images/un_reg.png) no-repeat 0 -230px;
+	}
+	/*网页主题表单部分*/
+	#section table{
+		width:720px;
+		height:380px;
+		table-layout:fixed;
+		border-collapse:collapse;
+		border-spacing:0px;
+		font-size:16px;
+		color:#333;
+	}
+	#section table td{
+		box-sizing:border-box;
+		padding:5px;
+	}
+	#section table td.vip{
+		font-size:24px;
+		font-weight:bold;
+	}
+	#section table td:first-child{
+		width:120px;
+		text-align:right;		
+	}
+	/*积分和返现部分*/
+	#section table i.credit{
+		font-style:normal;
+		color:#10A200;
+		font-weight:bold;
+	}
+	#section table u.return{
+		text-decoration:none;
+		color:#FF6600;
+		font-weight:bold;
+	}
+	#section table td:last-child{
+		width:345px;
+	}
+	#section table input{
+		padding:5px;
+		width:200px;
+	}
+	#section table span{
+		display:inline-block;
+		padding:3px 10px;
+		background-color:#F1D0B9;
+		color:#fff;
+		margin-right:-4px;
+	}
+	#section table input.chk{
+		width:15px;
+	}
+	#section table span.protocal{
+		color:#666666;
+		background-color:#fff;
+	}
+	#section table a.check{
+		display:inline-block;
+		padding:5px 56px;
+		border:1px solid #E77C00;
+		background-color:#FFB000;
+		box-shadow:0 1px #8E6F4C;
+		color:#fff;
+		font-size:18px;
+	}
+	#section table td.check{
+		padding-bottom:0px;
+	}
+	/*遇到问题部分*/
+	#section table td.problem{
+		padding-top:0px;
+	}
+	#section table a.problem{
+		color:#0066CC;
+	}
+	#section table a.problem:hover{
+		text-decoration:underline;
+	}
+	/*鼠标悬停时下一步的变化*/
+	#section table a.check:hover{
+		background-color:#F79700;
+	}
+/****网页右侧合作卡会员注册等信息****/
+	#aside{
+		width:250px;
+		height:300px;
+		float:left;
+		border:3px solid #DEE6EE;
+		margin-left:15px;
+		position:relative;
+	}
+	#aside:hover{
+		border-color:#A9BFD5;
+	}
+	/*卡片*/
+	#aside p.card{
+		height:70px;
+		width:70px;
+		background:url(images/un_reg.png) no-repeat 0px 0px;
+		position:absolute;
+		top:80px;
+		left:90px;
+	}
+	#aside a.card_reg{
+		color:#0066CC;
+		font-size:14px;
+		position:absolute;
+		top:165px;
+		left:80px;
+	}
+/****网页底部版权等信息****/
+	#footer{
+		clear:both;
+		height:50px;
+		width:1180px;
+		box-sizing:border-box;
+		text-align:center;
+		margin-top:100px;
+	}
+	#footer p.copy{
+		color:#57514C;
+		font-size:14px;
+		height:25px;
+		line-height:20px;
+	}
