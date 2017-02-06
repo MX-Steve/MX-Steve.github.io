@@ -14,23 +14,24 @@
 	}
 	/*北斗七星七颗星*/
 	div.bd{
-		width:30px;
-		height:30px;
+		width:45px;
+		height:45px;
 		border-radius:50%;
-		background-color:#0066ff;
-		border:5px solid #33ccff;
-		box-shadow:0 0 15px #33ccff;
+		/*background-color:#fff;*/
+		/*border:5px solid #33ccff;*/
+		box-shadow:0 0 30px #33ccff;
+		background:radial-gradient(#fff,#A34DB2);
 		position:absolute;
 		z-index:10;
 	}
 	div.bd a{
 		display:block;
-		width:10px;
-		height:10px;
+		width:20px;
+		height:20px;
 		border-radius:50%;
-		margin:5px;
-		background-color:pink;
-		border:5px solid silver;
+		margin:8px;
+		/*background-color:pink;*/
+		/*border:5px solid silver;*/
 	}
 	div.bd:hover{
 		transform:scale(3);
@@ -112,24 +113,31 @@
 	}
 	#title{
 		text-align:center;
+		color:#fff;
 	}
-
+	#contain{
+		width:1277px;
+		height:600px;
+		position:absolute;
+	}
   </style>
  </head>
  <body> 
 	<h1 id="title">开拓者之家</h1>
-	<div class="bd" id="bd1"><a href="xiecheng/index.html"></a></div>
-	<span class="line" id="line1"></span>
-	<div class="bd" id="bd2"></div>
-	<span class="line" id="line2"></span>
-	<div class="bd" id="bd3"></div>
-	<span class="line" id="line3"></span>
-	<div class="bd" id="bd4"></div>
-	<span class="line" id="line4"></span>
-	<div class="bd" id="bd5"></div>
-	<span class="line" id="line5"></span>
-	<div class="bd" id="bd6"></div>
-	<span class="line" id="line6"></span>
-	<div class="bd" id="bd7"></div>
+	<div id="contain">
+		<div class="bd" id="bd1"><a href="xiecheng/index.html"></a></div>
+		<span class="line" id="line1"></span>
+		<div class="bd" id="bd2"></div>
+		<span class="line" id="line2"></span>
+		<div class="bd" id="bd3"></div>
+		<span class="line" id="line3"></span>
+		<div class="bd" id="bd4"></div>
+		<span class="line" id="line4"></span>
+		<div class="bd" id="bd5"></div>
+		<span class="line" id="line5"></span>
+		<div class="bd" id="bd6"></div>
+		<span class="line" id="line6"></span>
+		<div class="bd" id="bd7"></div>
+	</div>
  </body>
 </html>
