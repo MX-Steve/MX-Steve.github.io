@@ -715,7 +715,7 @@
 	}
 	ul.left li section.sub_case{
 		min-height:300px;
-		width:500px;
+		min-width:600px;
 		box-sizing:border-box;
 		padding:15px;
 		background-color:#fff;
@@ -730,7 +730,14 @@
 		top:-6px;
 		left:318px;
 		z-index:95;
+		width:600px;
+		height:400px;
 		display:none;
+	}
+	section.left_subcase01>a{
+		position:absolute;
+		top:20px;
+		right:-55px;
 	}
 	li.theme_travel:hover div{
 		z-index:100;
@@ -740,6 +747,10 @@
 	}
 	section.sub_case dl{
 		margin:10px 0;
+	}
+	/*主题旅游中弹出框中的ul列表宽度*/
+	section.left_subcase01 dl{
+		width:350px;
 	}
 	section.sub_case dl dt{
 		font-weight:bold;
@@ -777,6 +788,15 @@
 			z-index:85;
 			display:none;
 		}
+		/*周边旅游中弹出框中的ul列表宽度*/
+		section.left_subcase02 dl{
+			width:350px;
+		}
+		section.left_subcase02>a{
+			position:absolute;
+			right:-30px;
+			bottom:0px;
+		}
 	/*国内旅游*/
 		ul.left li.home_travel{
 			position:relative;
@@ -785,15 +805,23 @@
 			background-color:#fff;
 			z-index:80;
 		}
-		li.home_travel:hover section.left_subcase03{
-			display:block;
-		}
+		
 		section.left_subcase03{
 			position:absolute;
-			top:-6px;
+			top:-136px;
 			left:318px;
 			z-index:75;
 			display:none;
+			width:900px;
+			height:800px;
+		}
+		li.home_travel:hover section.left_subcase03{
+			display:block;
+		}
+		/*国内旅游中弹出框中的ul列表宽度*/
+		section.left_subcase03 dl{
+			width:350px;
+			float:left;
 		}
 	/*香港旅游*/
 		ul.left li.xg_travel{
