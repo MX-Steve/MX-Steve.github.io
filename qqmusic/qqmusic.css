@@ -1,0 +1,769 @@
+/*测试样式*/
+{
+	width:1200px;
+	height:200px;
+	border:1px solid black;
+	margin:10px auto;
+}
+
+/*-----qqmusic通用样式-----*/
+	a{
+		text-decoration:none;
+		color:#333333;
+		font-size:14px;
+	}
+	a:hover{
+		color:#31C27C;
+	}
+	input,button,ul,ol,li,dl,dt,dd,table,tr,td,p,h1,h2,h3,h4,h5,h6,span,sup,sub,i,b,u,s{
+		text-decoration:none;
+		padding:0px;
+		margin:0px;
+		list-style:none;
+	}
+	.lf{float:left}
+	.rt{float:right}
+	.clear:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.out:before{
+		content:"";
+		display:table;
+	}
+/*--------页面头部信息----------*/
+	#header{
+		width:1200px;
+		height:90px;
+		margin:10px auto;
+		border-bottom:1px solid #F2F2F2;
+	}
+
+	a.logo{
+		height:52px;
+		width:190px;
+		display:inline-block;
+		margin:20px 15px 20px 0px;
+	}
+	a.logo img{
+		vertical-align:middle;
+	}
+	/*音乐馆--vip的a通用样式*/
+	.musicHouse,.myMusic,.download,.vip,.login{
+		display:inline-block;
+		height:90px;
+		padding:0 15px;
+		line-height:90px;
+		font-size:18px;
+	}
+	#header a.current{
+		background-color:#31C27C;
+		color:#fff;
+	}
+	#header div.search{
+		display:inline-block;
+		height:38px;
+		width:250px;
+		border:1px solid #C9C9C9;
+		margin-left:15px;
+		/*box-sizing:border-box;*/
+		padding-bottom:2px;
+		position:relative;
+	}
+	#header input.search{
+		height:36px;
+		width:200px;
+		box-sizing:border-box;
+		padding:0px 5px;
+		border:1px solid transparent;
+		background-color:transparent;
+		outline-color:transparent;
+	}
+	input.search:hover div.sub_search{
+		display:block;
+	}
+	#header div.search button.btnSearch{
+		display:inline-block;
+		height:38px;
+		width:35px;
+		border:none;
+		margin-bottom:2px;
+		background-color:#fff;
+		outline-color:transparent;
+	}
+	/*放大镜部分*/
+	#header div.search button.btnSearch i{
+		display:inline-block;
+		height:16px;
+		width:16px;
+		background:url(images/icon_sprite.png) no-repeat 0px -40px;
+	}
+	#header div.search button.btnSearch i:hover{
+		background-position:0px -60px;
+	}
+	#header button.greenDia{
+		padding:10px;
+		background-color:#31C27C;
+		color:#fff;
+		outline-color:transparent;
+	}
+	#header button.greenDia:hover{
+		background-color:#2CAF6F;
+	}
+	#header button.payBag{
+		border:1px solid #C9C9C9;
+		background-color:#fff;
+		padding:10px;
+	}
+	#header button.payBag:hover{
+		background-color:#EDEDED;
+	}
+	/*搜索栏弹出框部分*/
+	#header div.sub_search{
+		position:absolute;
+		top:38px;
+		left:0px;
+		min-height:150px;
+		width:250px;
+		box-sizing:border-box;
+		background-color:#fff;
+		border:1px solid #C9C9C9;
+		font-size:14px;
+		display:none;
+	}
+	#header div.sub_search li{
+		height:24px;
+		padding:5px 10px;
+		width:250;
+	}
+	#header div.sub_search li:hover{
+		background-color:#31C27C;
+	}
+	#header div.sub_search li:hover dt{
+		color:#fff;
+	}
+	#header div.sub_search li:hover dd.song{
+		color:#fff;
+	}
+	#header div.sub_search li:hover dd.count{
+		color:#fff;
+	}
+	#header div.sub_search dl dt{
+		margin-right:15px;
+		color:#FF8ECE;
+	}
+	#header div.sub_search dl dd.count{
+		color:#9CA2AF;
+	}
+	#header div.sub_search span.lf{
+		margin:10px;
+		color:#9CA2AF;
+	}
+	#header div.sub_search span.rt{
+		margin:10px;
+		display:inline-block;
+		height:16px;
+		width:16px;
+		background:url(images/icon_sprite.png) no-repeat -100px 0px;
+	}
+	#header div.sub_search span.rt:hover{
+		background-position:-20px -60px;
+	}
+/*--------页面导航栏信息--------*/
+	#nav{
+		width:1200px;
+		height:52px;
+		box-sizing:border-box;
+		margin:0px auto;
+		padding-left:300px;
+	}
+	#nav ul{
+		height:50px;
+		width:600px;
+	}
+	#nav ul li{
+		height:50px;
+		width:100px;
+		float:left;
+		line-height:50px;
+		text-align:center;
+	}
+	#nav ul li.current a{
+		color:#31C27C;
+	}
+/*----------新歌首发专栏---------------*/
+	#newSong{
+		width:1340px;
+		height:682px;
+		margin:0px auto;
+		background:url(images/bg_index_new.jpg) no-repeat;
+	}
+	.newSong_head{
+		height:48px;
+		width:200px;
+		margin:80px auto 20px;
+		text-align:center;
+		line-height:48px;
+		font-size:48px;
+		color:#fff;
+	}
+	.newSong_list{
+		height:50px;
+		width:350px;
+		margin:10px auto;
+	}
+	.newSong_list li{
+		float:left;
+		height:50px;
+		width:70px;
+		text-align:center;
+		line-height:50px;
+	}
+	.newSong_list a{
+		color:#8F8F8F;
+		font-size:18px;
+	}
+	.newSong_list li a:hover{
+		color:#fff;
+	}
+	.newSong_list li.current a{
+		color:#fff;
+	}
+	.newSong_picture li h3,p{
+		text-align:center;
+		line-height:26px;
+	}
+	.newSong_picture li h3{
+		margin-top:30px;
+	}
+	.newSong_picture li h3 a{
+		color:#fff;
+	}
+	.newSong_picture li p a{
+		color:#999;
+	}
+	/*全部两个字*/
+	.newSong_list>a{
+		position:absolute;
+		top:14px;
+		right:-420px;
+		color:#fff;
+	}
+	/*----图片设置----*/
+	.newSong_picture{
+		height:415px;
+		width:1200px;
+		margin:0 auto;
+		position:relative;
+		/*设置溢出影藏，来插入滚动图片*/
+		overflow:hidden;
+	}
+	.newSong_picture li{
+		height:415px;
+		width:300px;
+		float:left;
+		background-color:#000;
+		opacity:0.7;
+		position:relative;
+		overflow:hidden;
+		
+	}
+	/**左右两侧小按钮**/
+	div.leftchange,div.rightchange{
+		height:100px;
+		width:100px;
+		position:absolute;
+		background-color:#000;
+		opacity:0.8;
+		color:#fff;
+		text-align:center;
+		line-height:100px;
+		top:120px;
+		z-index:10;
+		font-weight:bold;
+	}
+	div.leftchange{
+		left:0px;
+	}
+	div.rightchange{
+		right:0px;
+	}
+	/*小图标设置*/
+	u.play{
+		position:absolute;
+		top:125px;
+		left:125px;
+		height:50px;
+		width:50px;
+		border-radius:50%;
+		background-color:#fff;
+		transition:transform 0.02s linear;
+		display-:none;
+	}
+	u.play i{
+		position:absolute;
+		top:10px;
+		left:20px;
+		height:0px;
+		width:0px;
+		border:15px solid transparent;
+		border-left-color:#606060;
+	}
+	.newSong_picture_1>a{
+		display:block;
+		height:300px;
+		width:300px;
+		box-sizing:border-box;
+		overflow:hidden;
+		transition:transform 1s linear;
+	}
+	.p1>a{background:url(images/newSong/newSong01.jpg) no-repeat;}
+	.p2>a{background:url(images/newSong/newSong02.jpg) no-repeat;}
+	.p3>a{background:url(images/newSong/newSong03.jpg) no-repeat;}
+	.p4>a{background:url(images/newSong/newSong04.jpg) no-repeat;}
+	.p5>a{background:url(images/newSong/newSong04.jpg) no-repeat;}
+	.p6>a{background:url(images/newSong/newSong04.jpg) no-repeat;}
+	.p7>a{background:url(images/newSong/newSong04.jpg) no-repeat;}
+	.p8>a{background:url(images/newSong/newSong04.jpg) no-repeat;}
+	.newSong_picture_1:hover{
+		background-color:#31C27C;
+	}
+	.newSong_picture_1:hover a{
+		color:#fff;
+	}
+	.newSong_picture_1>a:hover{
+		transform:scale(1.2);
+	}
+	.newSong_picture_1>a:hover u.play{
+		transform:scale(1.2);
+		display:block;
+	}
+/*--------精彩推荐部分--------*/
+	#recommend{
+		height:540px;
+		width:1200px;
+		box-sizing:border-box;
+		margin:50px auto 20px;
+		/*设置3d距离*/
+		perspective:500px;
+	}
+	#recommend div.leftchange{
+		left:-75px;
+		top:216px;
+	}
+	#recommend div.rightchange{
+		right:-75px;
+		top:216px;
+	}
+	.recommend_head{
+		height:70px;
+		width:490px;
+		margin:20px auto;
+		text-align:center;
+		line-height:70px;
+		font-size:48px;
+	}
+	.recommend_picture{
+		height:325px;
+		width:1200px;
+		box-sizing:border-box;
+		padding-top:50px;
+		position:relative;
+		transform-style:preserve-3d;
+		transform:rotatex(0deg);
+	}
+	.recommend_picture li{
+		width:608px;
+		height:243px;
+		position:absolute;
+		right:300px;
+	}
+	.recommend_picture li a{
+		display:block;
+		width:608px;
+		height:243px;
+	}
+	.recommend_picture li a img{
+		width:608px;
+		height:243px;
+	}
+	.pic1{
+		transform:translate3d(0,0,60px);
+	}
+	.pic2{
+		transform:translate3d(-300px,0,0);
+	}
+	.pic3{
+		transform:translate3d(-300px,0,-60px);
+	}
+	.pic4{
+		transform:translate3d(0,0,-120px);
+	}
+	.pic5{
+		transform:translate3d(300px,0,-60px);
+	}
+	.pic6{
+		transform:translate3d(300px,0,0);
+	}
+	.picture_bar{
+		margin-top:50px;
+		width:1200px;
+		height:20px;
+		padding:5px 400px;
+	}
+	.picture_bar a{
+		display:block;
+		width:50px;
+		height:0px;
+		border:2px solid #B9B9B9;
+		margin-right:15px;
+		float:left;
+	}
+/*-- 页面排行榜专区 ---------*/
+	#ranking{
+		height:830px;
+		width:1340px;
+		box-sizing:border-box;
+		margin:0px auto;
+		background:url(images/bg_index_top2.jpg) no-repeat;
+	}
+	.ranking_head{
+			height:70px;
+			width:490px;
+			margin:50px auto 0px;
+			text-align:center;
+			line-height:70px;
+			font-size:48px;
+			color:#fff;
+	}
+	#ranking a.rt{
+		color:#fff;
+		font-weight:bold;
+		margin-right:70px;
+		font-size:18px;
+	}
+	.fashion{
+		margin:40px auto 0px;
+		width:1200px;
+		height:567px;
+		background:url(images/bg_index_top.jpg) no-repeat;
+	}
+	.fashion li{
+		height:567px;
+		width:300px;
+		float:left;
+		position:relative;
+	}
+	.fashion li p{
+		height:24px;
+		width:66px;
+		margin:50px auto 5px;
+		color:#fff;
+		font-size:18px;
+	}
+	.fashion li h2{
+		font-size:36px;
+		color:#fff;
+		width:200px;
+		height:36px;
+		margin:5px auto;
+		text-align:center;
+	}
+	.fashion li span{
+		display:block;
+		width:60px;
+		height:0px;
+		border:1px solid #fff;
+		margin:50px auto;
+	}
+	.fashion li u.play{
+		top:140px;
+	}
+	.fashion li dl{
+		height:240px;
+		width:200px;
+		margin:50px auto;
+		padding:10px;
+	}
+	.fashion li dl dt{
+		height:20px;
+		overflow:hidden;
+	}
+	.fashion li dl dt a{
+		color:#fff;
+		font-size:18px;
+	}
+	.fashion li dl dd{
+		padding:5px 0px 15px 20px;
+	}
+	.fashion li dl dd a{
+		color:#ddd;
+		font-size:12px;
+	}
+/*---- 热门歌单部分-----*/
+	#hotList{
+		height:689px;
+		width:1340px;
+		box-sizing:border-box;
+		margin:50px auto;
+		position:relative;
+	}
+	#hotList div.leftchange,div.rightchange{
+		top:225px;
+	}
+	.hotList_head{
+		color:#333;
+		margin-bottom:60px;
+		font-size:48px;
+		text-align:center;
+	}
+	.hotlist_picture{
+		height:465px;
+		width:1200px;
+		box-sizing:border-box;
+		overflow:hidden;
+		margin:0px auto;
+	}
+	.hotlist_picture div.leftchange{
+		top:125px;
+		left:-75px;
+	}
+	.hotlist_picture div.rightchange{
+		top:125px;
+		right:-75px;
+	}
+	.hotlist_picture li{
+		height:465px;
+		width:300px;
+		box-sizing:border-box;
+		float:left;
+	}
+	.hotlist_picture li>a{
+		display:block;
+		height:300px;
+		width:300px;
+		position:relative;
+	}
+	.hotlist_picture li h3 a{
+		display:block;
+		font-size:18px;
+		height:26px;
+		line-height:26px;
+		width:225px;
+		margin:60px auto 20px;
+		overflow:hidden;
+		color:#fff;
+	}
+	.hotlist_picture li p a{
+		padding:3px;
+		background-color:#ddd;
+	}
+	li.hotlist01{background-color:#000;}
+	li.hotlist02{background-color:#ccc;}
+	li.hotlist03{background-color:#000;}
+	li.hotlist04{background-color:#ccc;}
+	#hotList p.picture_bar{
+		margin-left:100px;	
+	}
+/*-- 页面MV首播专区 --*/
+	#MVshow{
+		height:860px;
+		width:1340px;
+		box-sizing:border-box;
+		margin:50px auto;
+		background-color:#ddd;
+	}
+	.MVshow_head{
+		margin:100px auto 30px;
+		font-size:48px;
+		text-align:center;
+	}
+	div.MVshowlist{
+		height:50px;
+		width:1200px;
+		margin:0px auto;
+		line-height:50px;
+		text-align:center;
+	}
+	div.MVshowlist a{
+		font-size:18px;
+		margin:0px 20px;
+	}
+	ul.MVpicture{
+		height:304px;
+		width:1200px;
+		margin:0px auto;
+	}
+	ul.MVpicture li{
+		height:304px;
+		width:300px;
+		box-sizing:border-box;
+		text-align:center;
+		float:left;
+	}
+	ul.MVpicture li>a{
+		display:block;
+		height:170px;
+		width:300px;
+		overflow:hidden;
+		position:relative;
+	}
+	ul.MVpicture li h3{
+		line-height:38px;
+		margin-top:35px;
+	}
+	ul.MVpicture li>i{
+		display:inline-block;
+		height:15px;
+		width:20px;
+		background:url(images/icon_sprite.png) no-repeat -180px -18px;
+	}
+	ul.MVpicture li span{padding-left:5px;}
+	ul.MVpicture u{
+		top:65px;
+	}
+/*-------网页底部footer信息------*/
+	#footer{
+		width:1340px;
+		height:400px;
+		box-sizing:border-box;
+		background-color:#333333;
+		color:#999;
+		margin:10px auto;
+		padding:50px 70px 50px 70px;
+	}
+	#footer p{
+		font-size:12px;
+		text-align:center;
+		line-height:25px;
+		clear:both;
+	}
+	#footer p a{
+		font-size:12px;
+		color:#999;
+	}
+	div.downloadApp{
+		float:left;
+		height:280px;
+		width:450px;
+		margin:10px 0;
+	}
+	div.downloadApp li a{
+		color:#7F7F7F;
+	}
+	div.downloadApp li{
+		margin-top:50px;
+		text-align:center;
+	}
+	/*背景图片插入部分*/
+	div.downloadApp i{
+		display:block;
+		height:45px;
+		width:48px;
+		margin:30px 20px 10px 20px;
+		background:url(images/footer.png) no-repeat;
+	}
+	
+	div.downloadApp i.pc{
+		background-position:0px 0px;
+	}
+	div.downloadApp i.mac{
+		background-position:-90px 0px;
+	}
+	div.downloadApp i.android{
+		background-position:-190px 0px;
+	}
+	div.downloadApp i.iphone{
+		background-position:-280px 0px;
+	}
+	div.downloadApp li:hover i.pc{
+		background-position:0px -49px;
+	}
+	div.downloadApp li:hover a{
+		color:#31C27C;
+	}
+	div.downloadApp li:hover i.mac{
+		background-position:-90px -49px;
+	}
+	div.downloadApp li:hover i.android{
+		background-position:-190px -49px;
+	}
+	div.downloadApp li:hover i.iphone{
+		background-position:-280px -49px;
+	}
+	div.specialGoods{
+		float:left;
+		height:280px;
+		width:350px;
+		margin:10px 0;
+	}
+	div.specialGoods li{
+		padding:10px;
+	}
+	div.specialGoods a{
+		color:#7f7f7f;
+	}
+	div.specialGoods i{
+		display:block;
+		height:45px;
+		width:40px;
+		margin:30px 20px 10px 20px;
+		background:url(images/footer.png) no-repeat;
+	}
+	div.specialGoods i.kSong{
+		background-position:-370px 0px;
+	}
+	div.specialGoods li{
+		text-align:center;
+		margin-right:5px;
+	}
+	div.specialGoods li:hover a{
+		color:#31C27C;
+	}
+	div.specialGoods li:hover i.kSong{
+		background-position:-370px -49px;
+	}
+	div.specialGoods i.superSound{
+		background-position:-465px 0px;
+	}
+	div.specialGoods li:hover i.superSound{
+		background-position:-465px -49px;
+	}
+	div.specialGoods i.play{
+		background-position:-560px 0px;
+	}
+	div.specialGoods li:hover i.play{
+		background-position:-560px -49px;
+	}
+	div.cooperation{
+		float:left;
+		height:280px;
+		width:400px;
+		margin:10px 0;
+	}
+	div.cooperation li:hover a{
+		color:#31C27C;
+	}
+	div.cooperation a{
+		color:#7f7f7f;
+	}
+	div.cooperation li{
+		float:left;
+		height:30px;
+		width:105px;
+	}
+	div.cooperation h4{
+		margin-bottom:40px;
+	}
+	div.specialGoods li{
+		float:left;
+	}
+	div.downloadApp li{
+		float:left;
+		height:100px;
+		width:90px;
+	}
+	#footer p a:hover{
+		color:#31C27C;
+	}
