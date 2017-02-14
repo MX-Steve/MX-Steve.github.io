@@ -1,0 +1,110 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2016.2.14,我依然爱你</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<audio src="love.mp3" autoplay loop></audio>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">The Future</span><br />
+			<span class="space"/><span class="comments">相恋:2012—04-26,</span><br />
+			<span class="space"/><span class="comments">坚守:2016-02-14.</span><br />
+			<span class="space"/><span class="comments">To Be Continued</span><br />
+			良人 = <span class="keyword">王</span> 攀<br />
+			良人 = <span class="keyword">程</span> 超<br />
+			<span class="comments">为了遇见你,花光了我一生所有的运气 </span><br />
+			那一天  我闭目在经殿的香雾中  蓦然听见你颂经中的真言;<br />
+			<span class="comments">曾经幼稚倔强的我，让你受了好多委屈</span><br />
+			那一月  我摇动所有的经筒  不为超度  只为触摸你的指尖;<br />
+			<span class="comments">可是,大蜀山的万家灯火，只有和你走在路上，才能看到最美.</span><br />
+			那一年  磕长头匍匐在山路  不为觐见  只为贴着你的温暖;<br />
+			<span class="comments">原谅我的坏脾气和不懂事.</span><br />
+			那一世  转山转水转佛塔   不为修来世  只为途中与你相见;<br />
+			<span class="comments">我应该珍惜你的撒娇,安慰你的委屈.</span><br />
+			<span class="comments">那一夜  我听一宿梵唱   不为参悟   只为寻找你的一丝气息.</span><br />
+			<span class="keyword">我</span>不是 <span class="keyword">很快乐</span>;<br />
+			<span class="keyword">你也</span>如此<span class="keyword">忧伤</span>;<br />
+			<span class="placeholder"/><span class="comments">我们的爱,走过好多弯路,跌跌撞撞才明白了许多...</span><br />
+			<span class="placeholder"/><span class="comments">我们的第一站是南京,那里有秦淮河的灯影,东西不怎么好吃的夫子庙,爬的半死最终放弃的中山陵,我们乐此不疲,原谅我,那时记忆虽美,也让你受了委屈.</span><br />
+			<span class="placeholder"/>我们的第二站是上海,那里有东方之珠,卖怀表的老街,满目奢华,我们看着价格,然后看着彼此,尴尬的吐舌头,表示买不起,记忆很美,却有着分别的遗憾;<br />
+			<span class="comments">&nbsp;&nbsp;我仿佛在坐着一趟开往你身边的列车,看着沿途的风景,祈盼来到你的身边,途中做了好多梦...那些开心的,痛苦的,但终究都不后悔,毕竟,让人懂得珍惜,总要承受一些磨难.</span><br />
+			<br>
+			<br>
+			你时常说你没有安全感,我知道,因为你对我没信心,可是,我也在努力,不是吗?<br />
+			我希望我们都开心快乐,正如我们的感情终须开花结果,成长之中,如果因为风雨就不敢绽放,那么,我们将会多么遗憾;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					&nbsp;&nbsp;To you:除却巫山不是云<br/>
+					<div class="signature">あいしてる</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">未来</a><br />
+		<a href="#">继续</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2012, 4, 26);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>

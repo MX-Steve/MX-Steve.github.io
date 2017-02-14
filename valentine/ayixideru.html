@@ -1,0 +1,111 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2017.2.14,我依然爱你</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- 设置音频(自动循环播放) -->
+<audio src="css/Children Of The Earth.mp3" autoplay loop></audio>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">The Future</span><br />
+			<span class="space"/><span class="comments">相恋:2222-02-22,</span><br />
+			<span class="space"/><span class="comments">坚守:2017-02-14.</span><br />
+			<span class="space"/><span class="comments">To Be Continued</span><br />
+			良人 = <span class="keyword">李</span> 帅哥<br />
+			良人 = <span class="keyword">那</span> 谁来着？<br />
+			<span class="comments">为了遇见你,花光了我一生所有的运气 </span><br />
+			那一天  我闭目在经殿的香雾中  蓦然听见你颂经中的真言;<br />
+			<span class="comments">秋风清，秋月凉，落叶聚还散，寒鸦栖复惊</span><br />
+			那一月  我摇动所有的经筒  不为超度  只为触摸你的指尖;<br />
+			<span class="comments">相思相见知何日，此时此夜难为情.</span><br />
+			那一年  磕长头匍匐在山路  不为觐见  只为贴着你的温暖;<br />
+			<span class="comments">流沙指绊缁衣扣，柳梢绦垂杨花愁.</span><br />
+			那一世  转山转水转佛塔   不为修来世  只为途中与你相见;<br />
+			<span class="comments">回望高城落晓河，长亭窗户压微波.</span><br />
+			<span class="comments">那一夜  我听一宿梵唱   不为参悟   只为寻找你的一丝气息.</span><br />
+			<span class="keyword">我</span>不是 <span class="keyword">很快乐</span>;<br />
+			<span class="keyword">你也</span>如此<span class="keyword">忧伤</span>;<br />
+			<span class="placeholder"/><span class="comments">长相思兮长相忆，短相思兮无穷极...</span><br />
+			<span class="placeholder"/><span class="comments">窗外寒星冷月隔着雾，长夜对残烛，镜中愁容满面发未梳 素颜眉头蹙，自古多情总被无情误 相思穿肠肚，悠悠岁月几番寒暑 此去经年陌路，三生石 三生路 三世情缘尘归土，但相思 莫相负 再见时盼如故.</span><br />
+			<span class="placeholder"/>如花美眷谁人顾，浮生无你只是虚度，似水流年惹人妒 人间有你却胜无数，今生的我还在读 前世诀别的一纸书，手握传世的信物 而你此刻身在何处;<br />
+			<span class="comments">&nbsp;&nbsp;今生的我还在读，前世诀别的一纸书，手握传世的信物 而你此刻身在何处，今生的我还在读 前世诀别的一纸书，可你转世的脸谱 究竟轮回在哪一户，只因你 让青史绝唱于千古.</span><br />
+			<br>
+			<br>
+			一别之后，二地相悬。虽说是三四月，谁又知五六年。七弦琴无心弹，八行书无可传，九连环从中折断，十里长亭望眼欲穿。百思想，千系念，万般无奈把卿怨;万语千言道不完，百无聊赖十凭栏。重九登高看孤雁，八月中秋月圆人不圆。七月半，秉烛烧香问苍天，六月伏天人人摇扇我心寒。五月榴花似火，偏遇阵阵冷雨浇花端。四月枇杷未黄，我欲对镜心意乱。忽匆匆，三月桃花随水转，飘零零，二月风筝线儿断。叹复叹，一月里，朔风如割冰河雪飘声声慢;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					&nbsp;&nbsp;To you:除却巫山不是云<br/>
+					<div class="signature">爱してる</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">未来</a><br />
+		<a href="#">继续</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+//设置时间，从初始时间开始计算，比如2012-4-26；
+together.setFullYear(2012, 4, 26);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
