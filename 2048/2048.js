@@ -145,7 +145,7 @@ var game={
 			if(prevc!=-1){
 				if(this.data[r][c]==0){
 					this.data[r][c]=this.data[r][prevc];
-					this.data[r][nextc]=0;
+					this.data[r][prevc]=0;
 					c++;
 				}else if(this.data[r][c]==this.data[r][prevc]){
 					this.data[r][c]*=2;
