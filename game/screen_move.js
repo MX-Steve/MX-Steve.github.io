@@ -12,7 +12,7 @@ var game={
 		var config="top="+rTop+",left="+rLeft+",width="+this.PSIZE+",height="+this.PSIZE;
 		this.pop=open("about:blank","_blank",config);
 		var img=new Image();
-		img.src="E://MX-Steve.github.io/game/xiaoxin.jpg";
+		img.src="https://mx-steve.github.io/game/xiaoxin.jpg";
 		img.style.width=this.PSIZE-20+"px";
 		img.onclick=function(){alert("约吗？")}
 		this.pop.document.body.appendChild(img);
