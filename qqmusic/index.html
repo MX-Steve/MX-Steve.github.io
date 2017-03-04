@@ -64,7 +64,7 @@
 					<span class="rt"></span>
 				</div>
 			</div>
-			<a href="#" class="login">登录</a>
+			<a href="#" class="login" id="btLogin">登录</a>
 			<button class="greenDia">开通绿钻豪华版</button>
 			<button class="payBag">开通付费包</button>
 		</header>
@@ -625,6 +625,30 @@
 				腾讯公司 <a href="#">版权所有</a> <a href="#">腾讯网络文化经营许可证</a>
 			</p>
 		</footer>
+		<div class="loginParent" id="loginParent">
+			<div id="login" style="height:376px;">
+				<span class="rt" id="btClose">X</span> 
+				<h1>登录界面</h1>
+				<div class="loginson">
+					 用户名:<input type="text" placeholder="请输入用户名"><br /> 
+					 密&nbsp;码:<input type="password" placeholder="请输入密码"><br />
+					 <input type="submit" class="btn1" value="登录">
+					 <input type="button" class="btn2" value="注册">
+				 </div>
+			 </div>
+		</div>
+		<!-- <script src="jquery-1.11.3.js"></script> -->
+		<!-- <script src="jquery-ui.js"></script> -->
+		<script>
+			btLogin.onclick = function(e){
+				e.preventDefault();
+				//modalLogin.style.display = "block";
+				loginParent.className = 'loginParent active';
+			}
+			btClose.onclick = function(e){
+				loginParent.className = 'loginParent';
+			};
+		</script>
 		<script>
 			search.onclick=function(){
 				sub_search.style.display="block";
