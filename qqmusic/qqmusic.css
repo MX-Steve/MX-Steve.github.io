@@ -5,7 +5,55 @@
 	border:1px solid black;
 	margin:10px auto;
 }
-
+/*登录页面*/
+    .loginParent{
+		position:fixed;
+		top: 100%;left:0;right:0;bottom:0;
+		background: rgba(0,0,0,.3);
+		opacity: 0;
+		transition: opacity .2s linear;
+	}
+	.loginParent.active {
+		top: 0;
+		opacity: 1;
+	}
+	.loginson{
+		margin:40px auto;
+		height:250px;
+		width:300px;
+	}
+	#login{
+		margin:200px auto;
+		height:376px;
+		width:380px;
+		border:1px solid #ddd;
+		position:relative;
+		background-color:#F1EDEE;
+	}
+	#login>span{
+		border:2px solid #ddd;
+		padding:3px;
+		background-color:#228857;
+		cursor:pointer;
+		margin:5px;
+		border-radius:50%;
+	}
+	#login h1{
+		padding:5px 10px;
+		background-color:#31C27C;
+		color:#fff;
+	}
+	#login input{
+		margin:5px 8px;
+		padding:6px 15px;
+	}
+	#login .btn1{
+		margin-left:30px;
+		margin-top:30px;
+	}
+	#login .btn2{
+		margin-left:30px;
+	}
 /*-----qqmusic通用样式-----*/
 	a{
 		text-decoration:none;
