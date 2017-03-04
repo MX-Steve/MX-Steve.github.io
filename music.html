@@ -1,0 +1,277 @@
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        font-family: "微软雅黑", Microsoft YaHei;
+    }
+    .fd-pr{
+        position: relative;
+    }
+    .fd-left {
+        float: left;
+        display: inline-block;
+    }
+    .fd-right {
+        float: right;
+        display: inline-block;
+    }
+    .fd-clr {
+        *zoom:1}
+    .fd-clr:after {
+        display: block;
+        clear: both;
+        height: 0;
+        content: "\0020"
+    }
+    .masonry-page-content{
+        position: relative;
+        width: 550px;
+        margin: 0 auto;
+        background: #2d2e30;
+        border-radius: 3px;
+    }
+    .jp-interface{
+        position: relative;
+        width: 300px;
+        background-color: #2d2e30;
+        height: 60px;
+        margin-left: 13px;
+        font-size: 12px;
+    }
+    .jp-interface .tit{
+        margin-top: 20px;
+        color: #aaa;
+    }
+    #buffer{
+        display: none;
+        color: #aaa;
+    }
+    #btn-group{
+        margin-top: 13px;
+    }
+    #btn-group #btn-player-pause{
+        width: 39px;
+        height: 39px;
+        background: url(img/music-btn.png) -220px 0 no-repeat;
+        margin-right: 13px;
+        cursor: pointer;
+    }
+    #btn-group .btn-play{
+        background: url(img/music-btn.png) -140px 0 no-repeat !important;
+    }
+    #btn-group .btn-play:hover{
+        background: url(img/music-btn.png) -180px 0 no-repeat !important;
+    }
+    #btn-group #btn-prev{
+        width: 33px;
+        height: 33px;
+        background: url(img/music-btn.png) -1px 0 no-repeat;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 22px;
+        margin-right: 14px;
+    }
+    #btn-group #btn-prev:hover{
+        width: 33px;
+        height: 33px;
+        background: url(img/music-btn.png) -36px -1px no-repeat;
+    }
+    #btn-group #btn-next{
+        width: 33px;
+        height: 33px;
+        background: url(img/music-btn.png) -70px 0 no-repeat;
+        cursor: pointer;
+        margin-top: 3px;
+    }
+    #btn-group #btn-next:hover{
+        width: 33px;
+        height: 33px;
+        background: url(img/music-btn.png) -105px 0 no-repeat;
+        cursor: pointer;
+    }
+    #container{
+        margin-top: 5px;
+        width:200px;
+        height:3px;
+        border-radius: 3px;
+        background-color: #67686a;
+    }
+    #stick{
+        background-color: #31c37c;
+        height:3px;
+        width:0;
+    }
+    #name{
+        color: #aaa;
+    }
+    .jp-img{
+        width: 70px;
+        height: 70px;
+        text-align: center;
+    }
+    .jp-img img{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: 15px;
+    }
+    .jp-pic{
+        animation: 9.5s linear 0s normal none infinite rotate;
+        -webkit-animation:9.5s linear 0s normal none infinite rotate;
+    }
+    @-webkit-keyframes rotate{
+        from{-webkit-transform:rotate(0deg)}
+        to{-webkit-transform:rotate(360deg)}
+
+    }
+    @-moz-keyframes rotate{
+        from{-moz-transform:rotate(0deg)}
+        to{-moz-transform:rotate(360deg)}
+    }
+    @-ms-keyframes rotate{
+        from{-ms-transform:rotate(0deg)}
+        to{-ms-transform:rotate(360deg)}
+    }
+    @-o-keyframes rotate{
+        from{-o-transform:rotate(0deg)}
+        to{-o-transform:rotate(360deg)}
+    }
+
+</style>
+<body>
+<div class="masonry-page-content fd-clr">
+    <audio id="aud"></audio>
+    <div id="btn-group" class="fd-left">
+        <button id="btn-prev" title="上一首"></button>
+        <button id="btn-player-pause" title="播放"></button>
+        <button id="btn-next" title="播放"></button>
+    </div>
+    <div class="jp-img fd-left">
+        <img id="jp-pic" class="" src="123.jpg">
+    </div>
+    <div class="jp-interface fd-left">
+        <div class="tit">
+            当前歌曲：<strong id="name"></strong>
+        </div>
+        <div id="buffer"></div>
+        <div id="container">
+            <div id="stick" ></div>
+        </div>
+    </div>
+</div>
+<script>
+	window.onload=function(){
+		//当前播放的歌曲索引
+		var currentIndex=-1;
+		//  播放器元素对象
+		var audio=document.getElementById("aud");
+		// 歌曲列表
+		var mlist=["Blank Space.mp3","Lana Del Rey - Young And Beautiful.mp3","Wiz Khalifa - See You Again.mp3"];
+		// 图片路径
+		var imglist=["123.jpg","Lana Del Rey.jpg","0039Pp2W372JsM.jpg"];
+		//歌曲路径
+		var msrc=["杨宗纬 - 凉凉 (《三生三世十里桃花》电视剧片尾曲).mp3","Lana Del Rey - Young And Beautiful.mp3","Wiz Khalifa - See You Again.mp3"];
+		//进度条
+		var stick=document.getElementById("stick");
+		// 图片旋转
+		var imgRotate = document.getElementById("jp-pic");
+		//初始化函数
+		function finit(){
+			document.getElementById("name").innerHTML=mlist[0];
+		}
+		//播放停止按钮
+		var oPlayOrPause=document.getElementById("btn-player-pause");
+		// 播放或暂停
+		oPlayOrPause.onclick = function fPlayMusic(){
+			if(currentIndex==-1){
+				audio.src=msrc[0];
+				currentIndex=0;
+			}
+			if(audio.paused){
+				audio.play();
+				oPlayOrPause.className='btn-play';
+				oPlayOrPause.title="暂停";
+				imgRotate.className = 'jp-pic';
+			}else{
+				audio.pause();
+				oPlayOrPause.className='';
+				oPlayOrPause.title="播放";
+				imgRotate.className = '';
+			}
+		}
+		// 上一曲
+		document.getElementById("btn-prev").onclick=function(){
+			if (currentIndex == 0) {
+				currentIndex = mlist.length-1;
+				document.getElementById("name").innerHTML=mlist[currentIndex];
+			} else {
+				currentIndex--;
+				document.getElementById("name").innerHTML=mlist[currentIndex];
+
+			}
+			imgRotate.src = 'img/'+imglist[currentIndex];
+			audio.src = msrc[currentIndex];
+			stick.style.width=0;
+			audio.play();
+			imgRotate.className = 'jp-pic';
+			oPlayOrPause.title="暂停";
+			oPlayOrPause.className='btn-play';
+		}
+		// 下一曲
+		document.getElementById("btn-next").onclick=function(){
+			if (currentIndex == (mlist.length-1)) {
+				currentIndex = 0;
+				document.getElementById("name").innerHTML=mlist[0];
+			} else {
+				currentIndex++;
+				document.getElementById("name").innerHTML=mlist[currentIndex];
+			}
+			imgRotate.src = 'img/' + imglist[currentIndex];
+			audio.src = msrc[currentIndex];
+			stick.style.width=0;
+			audio.play();
+			imgRotate.className = 'jp-pic';
+			oPlayOrPause.className='btn-play';
+			oPlayOrPause.title="暂停";
+		}
+		//播放进度条
+		audio.addEventListener('timeupdate',function(){
+			if (!isNaN(audio.duration)) {
+				var progressValue = audio.currentTime/audio.duration*200;
+				stick.style.width = parseInt(progressValue) + 'px';
+			};
+		},false);
+		//歌曲结束时
+		audio.addEventListener('ended',function(){
+			stick.style.width=0;
+			oPlayOrPause.className='';
+			oPlayOrPause.title="播放";
+			imgRotate.className = '';
+		},false);
+		//判断歌曲是否可以播放
+		audio.addEventListener('canplay',function(){
+			var buffer=document.getElementById("buffer");
+			buffer.style.display="none";
+		},false);
+		//监听歌曲是否缓冲
+		audio.addEventListener('loadstart',function(){
+			var buffer=document.getElementById("buffer");
+			buffer.style.display="block";
+			buffer.innerHTML="正在获取数据...";
+		},false);
+		//初始化
+		finit();
+	}
+</script>
+</body>
+
+
+
