@@ -420,6 +420,8 @@
 		position:relative;
 		transform-style:preserve-3d;
 		transform:rotatex(0deg);
+		transition:all .5s linear;
+		overflow:hidden;
 	}
 	.recommend_picture li{
 		width:608px;
@@ -437,22 +439,22 @@
 		height:243px;
 	}
 	.pic1{
-		transform:translate3d(0,0,60px);
+		transform:translate3d(-224px,0,0) scale(1);
 	}
 	.pic2{
-		transform:translate3d(-300px,0,0);
+		transform:translate3d(-360px,0,0) scale(1);
 	}
 	.pic3{
-		transform:translate3d(-300px,0,-60px);
+		transform:translate3d(1120px,0,0) scale(1);
 	}
 	.pic4{
-		transform:translate3d(0,0,-120px);
+		transform:translate3d(896px,0,0) scale(1);
 	}
 	.pic5{
-		transform:translate3d(300px,0,-60px);
+		transform:translate3d(449px,0,0) scale(1);
 	}
 	.pic6{
-		transform:translate3d(300px,0,0);
+		transform:translate3d(0px,0,0) scale(1.2);
 	}
 	.picture_bar{
 		margin-top:50px;

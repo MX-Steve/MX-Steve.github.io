@@ -1,0 +1,193 @@
+/*测试部分*/
+
+/*-----qqmusic下载通用样式-----*/
+	a{
+		text-decoration:none;
+		color:#fff;
+		font-size:20px;
+	}
+	a:hover{
+		color:#fff;
+	}
+	body,html,input,button,ul,ol,li,dl,dt,dd,table,tr,td,p,h1,h2,h3,h4,h5,h6,span,sup,sub,i,b,u,s{
+		text-decoration:none;
+		padding:0px;
+		margin:0px;
+		list-style:none;
+	}
+	.lf{float:left}
+	.rt{float:right}
+	.clear:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.out:before{
+		content:"";
+		display:table;
+	}
+/*楼梯*/
+	div.side{
+		height:130px;
+		width:28px;
+		position:fixed;
+		right:0;
+		top:45%;
+	}
+	div.side a{
+		margin:5px auto;
+		display:block;
+		height:15px;
+		width:15px;
+		background-color:rgba(255,255,255,.5);
+		border-radius:50%;
+	}
+	div.side a.current{
+		background-color:#fff;
+	}
+/*菜单栏部分*/
+	div.menu{
+		height:80px;
+		width:1280px;
+		background-color:rgba(1,7,11,.5);
+		position:fixed;
+	}
+	div.menu div.menu_content{
+		height:46px;
+		width:996px;
+		margin:17px auto;
+		line-height:46px;
+	}
+	div.menu div.menu_nav{
+		margin-left:80px;
+	}
+	div.menu div.menu_nav a.product{
+		margin-right:35px;
+		color:#31C27C;
+	}
+	div.menu a.menu_link{
+		display:block;
+		height:46px;
+		width:159px;
+		background:url(downimg/logo.png) 0 0 no-repeat;
+	}
+	div.menu_content a.rt{
+		margin-left:35px;
+	}
+.page01,.page02,.page03,.page04,.page05{
+	height:890px;
+	width:1280px;
+	background-color:#ddd;
+	box-sizing:border-box;
+}
+/*<!--page01立即下载 -->*/
+	.page01{
+		background:url(downimg/banner_pc.jpg) no-repeat;
+	}
+	.page01 .watch{
+		height:478px;
+		width:476px;
+		margin:150px 0 80px 70px;
+		background:url(downimg/watch_bg.png) 0 0 no-repeat;
+	}
+	h2.lf{
+		width:578px;
+		height:214px;
+		margin:250px 0 0 60px;
+		background:url(downimg/img_index.png) 0 0 no-repeat;
+	}
+	a.btn{
+		display:block;
+		height:69px;
+		width:293px;
+		float:left;
+		margin:20px 0 0 60px;
+		background:url(downimg/img_index.png) -372px -735px no-repeat;
+	}
+	.page_bottom{
+		height:190px;
+		width:1280px;
+		box-sizing:border-box;
+		border-top:1px solid #202B35;
+		padding:0 80px;
+	}
+	.page_bottom a{
+		display:block;
+		float:left;
+		height:170px;
+		width:110px;
+		margin:0 80px;
+		opacity:.5;
+		border:2px solid transparent;
+	}
+	.page_bottom a.pc{
+		background:url(downimg/img_index.png) -336px -824px;
+		opacity:1;
+		border-top-color:#fff;
+	}
+	.page_bottom a.pc:hover{
+		opacity:1;
+	}
+	.page_bottom a.mac{
+		background:url(downimg/img_index.png) -224px -824px;
+	}
+	.page_bottom a.mac:hover{
+		opacity:1;
+	}
+	.page_bottom a.iphone{
+		background:url(downimg/img_index.png) -112px -824px;
+	}
+	.page_bottom a.iphone:hover{
+		opacity:1;
+	}
+	.page_bottom a.android{
+		background:url(downimg/img_index.png) 0 -824px;
+	}
+	.page_bottom a.android:hover{
+		opacity:1;
+	}
+/*<!--page02正版歌曲 -->*/
+/*<!--page03社交互动 -->*/
+	.page03{
+		background:url(downimg/bg_lyric.jpg) no-repeat;
+	}
+/*<!--page04只能推荐 -->*/
+	.page04{
+		background:url(downimg/bg_like.jpg) no-repeat;
+	}
+/*<!--page05终端同步 -->*/
+	.page05{
+		background:url(downimg/bg_synchro.jpg) no-repeat;
+	}
+	.page05>h2{
+		height:136px;
+		width:544px;
+		margin-top:170px;
+		margin-left:60px;
+		background:url(downimg/img_index.png)  -617px -216px no-repeat;
+	}
+	.page05>h3{
+		height:63px;
+		width:454px;
+		margin-left:60px;
+		margin-top:20px;
+		background:url(downimg/img_index.png)  -580px -147px no-repeat;
+	}
+	div.phone{
+		height:329px;
+		width:255px;
+		background:url() no-repeat;
+	}
+	/*<!--2 公司版权信息 -->*/
+	.copyright{
+		box-sizing:border-box;
+		height:72px;
+		width:1280px;
+		padding:9px;
+		background-color:rgba(1,7,11,.5);		
+	}
+	.copyright p{
+		text-align:center;
+		height:22px;
+		color:#fff;
+	}
