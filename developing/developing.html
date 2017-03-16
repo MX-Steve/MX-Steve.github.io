@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Start From Zero</title>
+  <link rel="stylesheet" href="developing.css" />
+ </head>
+ <body>
+  <h1 id="firstTitle">开拓者之家</h1>
+  <aside class="leftAside">好好学习</aside>
+  <aside class="rightAside">天天向上</aside>
+  <!-- iq专栏 -->
+  <div id="iq">
+	<h1>逻辑练习</h1>
+	<p>
+		桌子上有6支化验的玻璃瓶，前三只装满水，后面三只空的，只移动1只玻璃瓶，如何使装满水的与空的间隔放？
+	</p>
+	<p>
+		五个大小相同的一元硬币。要求两两相接触，怎么摆？
+	</p>
+	<p>
+		一个人花8块钱买了一只鸡，9块钱卖掉了，然后他觉得不划算，花了十块钱又买了回来，11块卖给另一个人，问他赚了多少？
+	</p>
+	<p>
+	甲、乙、丙三个人在一起做作业，有一道数学题比较难，当他们三个人都把自己的解法说出来以后，甲说：“我做错了。”乙说：“甲做对了。”丙说：“我做错了。”在一旁的丁看到他们的答案并听了她们的意见后说：“你们三个人中有一个人做对了，有一个人说对了。”请问，他们三人中到底谁做对了?
+	</p>
+	<p>
+	　赵女士买了一些水果和小食品准备去看望一个朋友，谁知，这些水果和小食品被他的儿子们偷吃了，但她不知道是哪个儿子。，为此，赵女士非常生气，就盘问4个儿子谁偷吃了水果和小食品。老大说道：“是老二吃的。”老二说道：“是老四偷吃的。”老三说道：“反正我没有偷吃。”老四说道：“老二在说谎。”这4个儿子中只有一个人说了实话，其他的3个都在撒谎。那么，到底是谁偷吃了这些水果和小食品?
+	</p>
+	<p>
+	姐姐上街买菜回来后，就随手把手里的一些零钱放在了抽屉里，可是，等姐姐下午再去拿钱买菜的时候发现抽屉里的零钱没有了，于是，她就把三个妹妹叫来，问她们是不是拿了抽屉里的零钱，甲说：“我拿了，中午去买零食了。”乙说：“我看到甲拿了。”丙说：“总之，我与乙都没有拿。”这三个人中有一个人在说谎，那么到底谁在说谎?谁把零钱拿走了?
+	</p>
+	<p>
+	一楼到十楼的每层电梯门口都放着一颗钻石，钻石大小不一。你乘坐电梯从一楼到十楼，每层楼电梯门都会打开一次，只能拿一次钻石，问怎样才能拿到最大的一颗？
+	</p>
+	<p>
+	有一个人在一个森林里迷路了，他想看一下时间，可是又发现自己没带表。恰好他看到前面有两个小女孩在玩耍，于是他决定过去打听一下。更不幸的是这两个小女孩有一个毛病，姐姐上午说真话，下午就说假话，而妹妹与姐姐恰好相反。但他还是走近去他问她们：“你们谁是姐姐?”胖的说：“我是。”瘦的也说：“我是。”他又问：现在是什么时候?胖的说：“上午。”“不对”，瘦的说：“应该是下午。”这下他迷糊了，到底他们说的话是真是假?
+	</p>
+	<p>
+	一个陶瓷公司要给某地送2000个陶瓷花瓶，于是就找一个运输公司运陶瓷花瓶。运输协议中是这样规定的：
+	(1)每个花瓶的运费是1元;
+	(2)如果打碎1个，不但不给运费，还要赔偿5元。
+	最后，运输公司共得运费1760元。那么，这个运输公司在运送的过程中打碎了多少个陶瓷花瓶?
+	</p>
+	<p>
+	更新中...
+	</p>
+  </div>
+  <div id="specialitems">
+	<div class="itemlist" id="itemlist"></div>
+	<textarea id="msg" cols="30" rows="3"></textarea>
+	<button id="pushin">提交</button>
+	<button class="btn" id="calculate">计算器</button>
+	<button class="btn" id="game">游戏机</button>
+	<button class="btn" id="search">百度搜索</button>
+	<button class="btn" id="drawing">画图工具</button>
+	<button class="btn" id="define01">自定义01</button>
+	<button class="btn" id="define02">自定义02</button>
+  </div>
+  <script>
+	pushin.onclick=function(){
+		itemlist.innerHTML=msg.value;
+		msg.value="";
+		
+	}
+  </script>
+ </body>
+</html>
