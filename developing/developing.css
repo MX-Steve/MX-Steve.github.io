@@ -1,0 +1,168 @@
+/********样式格式化**********/
+h1,h2,h3,h4,h5,h6,p,span,div,table,tr,td,dl,dt,dd,ol,ul,li,i,sup,sub,u,s,a,b{
+	text-decoration:none;
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.noOut:before{
+	content:"";
+	display:table;
+}
+body{
+	background:url(meitu01.jpg) no-repeat;
+	background-size:cover;
+}
+#firstTitle{
+	height:30px;
+	line-height:30px;
+	width:200px;
+	margin:0 auto;
+	text-align:center;
+}
+/*********固定在网页两侧的东西**********/
+.leftAside,.rightAside{
+	height:300px;
+	width:45px;
+	box-sizing:border-box;
+	position:fixed;
+	top:100px;
+	background-color:#99ffcc;
+	font-size:35px;
+	color:#e4393c;
+	text-align:center;
+	line-height:65px;
+}
+.leftAside{left:0px;}
+.rightAside{right:0px;}
+/*iq逻辑题练习*/
+#iq{
+	width:60%;
+	height:300px;
+	box-sizing:border-box;
+	border:10px solid #ccc;
+	overflow:auto;
+	margin:20px auto;
+	padding:50px 10px 10px 10px;
+	background-color:#ddd;
+	text-indent:30px;
+	line-height:30px;
+	color:#00cc00;
+	/*设置计数器为p题计数*/
+	counter-reset:num 0;
+	position:relative;
+}
+#iq h1{
+	font-size:34px;
+	text-align:center;
+	color:#fff;
+	background-color:#f1f1f1;
+	height:40px;
+	width:100%;
+	text-shadow:5px 5px silver;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#iq p{
+	counter-increment:num 1;
+	margin:10px;
+}
+#iq p:before{
+	content:"【"counter(num)"】";
+}
+#vidios{
+	height:200px;
+	width:200px;
+	border:2px solid #ddd;
+}
+/*经典考题专栏*/
+#specialitems{
+	width:60%;
+	height:400px;
+	margin:20px auto;
+	border:5px solid silver;
+	box-shadow:0 0 20px #ccc;
+	background-color:#ddd;
+	opacity:0.8;
+	position:relative;
+}
+div.itemlist{
+	width:80%;
+	height:300px;
+	border:3px solid #f1f1f1;
+	box-shadow:5px 5px 20px red;
+	margin:0 auto;
+	color:black;
+	box-sizing:border-box;
+	padding:10px 15px;
+	overflow:hidden;
+	background-image:linear-gradient(silver,#fff);
+}
+#msg{
+	width:80%;
+	height:80px;
+	display:block;
+	margin:5px auto;
+	font-size:18px;
+	color:red;
+}
+#pushin{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	height:30px;
+	width:60px;
+	font-size:18px;
+	font-weight:bold;
+	border-radius:15px;
+	color:#fff;
+	background-color:green;
+	box-shadow:0 0 10px silver;
+}
+/*六个按钮*/
+.btn{
+	height:40px;
+	width:120px;
+	border:3px solid #e4393c;
+	box-shadow:10px 10px 15px #ccc;
+	border-radius:10px;
+	background:linear-gradient(to bottom,#ccc,#e4393c,#ccc);
+	color:#fff;
+	font-weight:bold;
+	font-size:24px;
+	line-height:30px;
+	text-align:center;
+	position:absolute;
+}
+#calculate{
+	left:-35px;
+	top:35px;
+}
+#game{
+	left:-35px;
+	top:120px;
+}
+#drawing{
+	left:-35px;
+	top:205px;
+}
+#search{
+	right:-35px;
+	top:35px;
+}
+#define01{
+	right:-35px;
+	top:120px;
+}
+#define02{
+	right:-35px;
+	top:205px;
+}
