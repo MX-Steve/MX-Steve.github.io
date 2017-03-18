@@ -7,6 +7,13 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>Start From Zero</title>
+	<style>
+		#s1{
+			display:none;
+			border:5px solid #ddd;
+			background-color:#f0f0f0
+		}
+	</style>
   <link rel="stylesheet" href="developing.css" />
  </head>
  <body>
@@ -51,7 +58,10 @@
 	</p>
   </div>
   <div id="specialitems">
-	<div class="itemlist" id="itemlist"></div>
+	<div class="itemlist" id="itemlist">
+			<svg id="s1" width="600" height="400">
+    </svg>
+	</div>
 	<textarea id="msg" cols="30" rows="3"></textarea>
 	<button id="pushin">提交</button>
 	<button class="btn" id="calculate">计算器</button>
@@ -61,12 +71,128 @@
 	<button class="btn" id="define01">自定义01</button>
 	<button class="btn" id="define02">自定义02</button>
   </div>
+	<canvas id='c11' width='500' height='130' style='background:#303030;border:5px solid #ddd;display:none;'>
+        您的浏览器不支持CANVAS
+			</canvas>
   <script>
 	pushin.onclick=function(){
 		itemlist.innerHTML=msg.value;
 		msg.value="";
-		
+	}
+	game.onclick=function(){
+		itemlist.innerHTML="<a href='#' onclick='painter()'>mouth _ close</a>";
+		//c11.style.display="block";
+	};
+	function painter(){
+				var s1=document.getElementById("s1");
+				s1.style.display="block";
+				function rn(min,max){//随机生成一个数字
+            return Math.floor(Math.random()*(max-min)+min);
+        }
+        function rc(min,max){
+            var r = rn(min,max);
+            var g = rn(min,max);
+            var b = rn(min,max);
+            return  `rgb(${r},${g},${b})`;
+        };
+        s1.onclick=function(e){
+            s1.innerHTML="";
+            var mx = parseInt(e.offsetX);
+            var my = e.offsetY;
+            var rect = document.createElementNS("http://www.w3.org/2000/svg",'rect');
+            rect.setAttribute('x',mx);
+            rect.setAttribute('y',my);
+            rect.setAttribute('width',100);
+            rect.setAttribute('height',100);
+            rect.setAttribute('fill',rc(100,200));
+            s1.appendChild(rect);
+//            this.siblings().clear();
+
+        };
 	}
   </script>
+	  <script>
+        var ctx = c11.getContext("2d");
+        ctx.lineWidth=5;
+        var isOpen=true;
+        var step =0;
+        function rc(){
+            var r = Math.floor(Math.random()*256);
+            var g = Math.floor(Math.random()*256);
+            var b = Math.floor(Math.random()*256);
+            return `rgb(${r},${g},${b})`;
+        }
+        function open(){
+            ctx.beginPath();//脸
+            ctx.clearRect(0,0,110,100);
+            ctx.arc(60,60,50,45*Math.PI/180,315*Math.PI/180);
+            ctx.lineTo(60,60);
+            ctx.closePath();
+            ctx.strokeStyle="blue";
+            ctx.stroke();
+            ctx.fillStyle="yellow";
+            ctx.fill();
+            ctx.beginPath();//眼睛
+            ctx.arc(45,35,15,0,2*Math.PI);
+            ctx.fillStyle="black";
+            ctx.fill();
+            ctx.beginPath();//鼻子
+            ctx.arc(75,25,5,0,2*Math.PI);
+            ctx.fillStyle="orange";
+            ctx.fill();
+            ctx.beginPath();//眼珠
+            ctx.arc(49,31,5,0,2*Math.PI);
+            ctx.fillStyle="white";
+            ctx.fill();
+        }
+        function close(){
+            ctx.beginPath();//脸
+            ctx.clearRect(0,0,110,100);
+            ctx.arc(60,60,50,0,360*Math.PI/180);
+            ctx.lineTo(60,60);
+            ctx.closePath();
+            ctx.strokeStyle="blue";
+            ctx.stroke();
+            ctx.fillStyle="yellow";
+            ctx.fill();
+            ctx.beginPath();//眼睛
+            ctx.arc(68,35,15,0,2*Math.PI);
+            ctx.fillStyle="black";
+            ctx.fill();
+            ctx.beginPath();//鼻子
+            ctx.arc(90,40,5,0,2*Math.PI);
+            ctx.fillStyle="orange";
+            ctx.fill();
+            ctx.beginPath();//眼珠
+            ctx.arc(71,36,5,0,2*Math.PI);
+            ctx.fillStyle="white";
+            ctx.fill();
+        }
+        function ball(){
+            var timerB = setInterval(function(){
+                ctx.beginPath();
+                ctx.arc(500-step,60,25,0,2*Math.PI);
+                ctx.clearRect(110,0,390,200);
+                ctx.fillStyle = rc();
+                ctx.fill();
+                if(step >=380){
+                    step =0;
+                }
+                step +=35;
+
+            },300);
+        }
+        ball();
+        var timer=setInterval(function(){
+            ctx.clearRect(0,0,114,110);
+            if(isOpen==true){
+                close();
+                isOpen=false;
+            }else{
+                open();
+                isOpen=true;
+            }
+        },300);
+    </script>
  </body>
 </html>

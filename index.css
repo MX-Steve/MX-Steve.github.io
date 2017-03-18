@@ -10,7 +10,7 @@
 		box-shadow:0 0 30px #33ccff;
 		background:radial-gradient(#fff,#A34DB2);
 		position:absolute;
-		z-index:10;
+		z-index:101;
 	}
 	a{
 		display:block;

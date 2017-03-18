@@ -12,6 +12,7 @@
  </head>
  <body> 
 	<h1 id="title">开拓者之家</h1>
+	<svg width="100%" height="800px" id="s1" style="position:absolute;top:0;left:0;right:0;bottom:0;z-index:100"></svg>
 	<div id="contain">
 		<div class="bd" id="bd1"><a href="xiecheng/index.html">携程</a></div>
 		<span class="line" id="line1"></span>
@@ -27,5 +28,67 @@
 		<span class="line" id="line6"></span>
 		<div class="bd" id="bd7"></div>
 	</div>
+	<script>
+        function rc(){
+            var r = Math.floor(Math.random()*255);
+            var g = Math.floor(Math.random()*255);
+            var b = Math.floor(Math.random()*255);
+            return `rgb(${r},${g},${b})`;
+        }
+				function rn(min,max){
+					return Math.floor(Math.random()*(max-min)+min);
+				}
+        s1.onmousemove =function(e){
+            var circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+                var x= e.offsetX;
+                var y= e.offsetY;
+                circle.setAttribute('cx',x);
+                circle.setAttribute('cy',y);
+                circle.setAttribute('r',1);
+                circle.setAttribute('opacity',0.4);
+                circle.setAttribute('fill',rc());
+                s1.appendChild(circle);
+                var r=circle.getAttribute('r');
+                var o=circle.getAttribute('opacity');
+                var timer=setInterval(function(){
+                    r=parseInt(r);
+                    r+=5;
+                    circle.setAttribute('r',r);
+                    o=parseFloat(o);
+                    o-=0.05;
+                    circle.setAttribute('opacity',o);
+                    if(r>=100){
+                        clearInterval(timer);
+                        circle.remove();
+                    }
+                },50);
+        }
+				function autoCreate(){
+					var html ='';
+					html += `
+							<circle cx='${rn(0,1000)}' cy='${rn(0,600)}' r = 10 fill='${rc()}' opacity='1'></circle>
+						`;
+						s1.innerHTML=html;
+						var circle = document.getElementsByTagName('circle')[0];
+						var r = circle.getAttribute('r');
+						var o = circle.getAttribute('opacity');
+					var timer=setInterval(function(){
+                    r=parseInt(r);
+                    r+=5;
+                    circle.setAttribute('r',r);
+                    o=parseFloat(o);
+                    o-=0.05;
+                    circle.setAttribute('opacity',o);
+                    if(o<=0){
+                        clearInterval(timer);
+                        circle.remove();
+                    }
+                },100);
+				}
+				var timer1=setInterval(function(){
+					autoCreate();
+				},2000);
+				
+    </script>
  </body>
 </html>
