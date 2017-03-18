@@ -8,7 +8,9 @@
   <meta name="Description" content="">
   <title>MX-Steve_开拓者之家</title>
 	<link rel="stylesheet" href="index.css">
-  
+  <style>
+		
+	</style>
  </head>
  <body> 
 	<h1 id="title">开拓者之家</h1>
@@ -28,6 +30,22 @@
 		<span class="line" id="line6"></span>
 		<div class="bd" id="bd7"></div>
 	</div>
+	<div id="bgcolor">
+		<input type="range" id="r" max="100" min="0" value="0"/>
+		<span>红色</span><br />
+    <input id="g" type="range" max="100" min="0" value="0"/>
+		<span>绿色</span><br />
+    <input id="b" type="range" max="100" min="0" value="0"/>
+		<span>蓝色</span><br />
+		<h3>背景图片切换</h3>
+		<ul id="bgImg">
+			<li><a href="0">科技</a></li>
+			<li><a href="1">大海</a></li>
+			<li><a href="2">永久</a></li>
+			<li><a href="3">鲜花</a></li>
+		</ul>
+	</div>
+	<script src="jq.js"></script>
 	<script>
         function rc(){
             var r = Math.floor(Math.random()*255);
@@ -88,7 +106,66 @@
 				var timer1=setInterval(function(){
 					autoCreate();
 				},2000);
-				
-    </script>
+				//设置背景颜色
+	function changeBoxBg(){
+    var r = document.getElementById("r");
+    var g = document.getElementById("g");
+    var b = document.getElementById("b");
+    var r1 = r.value;
+    var g1 = g.value;
+    var b1 = b.value;
+    document.getElementsByTagName('body')[0].style.background = `rgb(${r1},${g1},${b1})`;
+	}
+	var list = document.querySelectorAll("input");
+	for(var i=0;i<list.length;i++){
+    var range = list[i];
+    range.onchange = function(){
+        this.nextElementSibling.innerHTML
+                = this.value;
+        changeBoxBg();
+    }
+	}
+	var imgs = [
+		'img/sc.jpg',
+		'img/sea.jpg',
+		'img/forever.jpg',
+		'img/flower.jpg'
+	];
+	$("#bgImg").on('click','a',function(e){
+		e.preventDefault();
+		var a_s = $("#bgImg a");
+		var _this_=$(this).attr('href');
+		var url='';
+		/*
+		if(_this_==0){
+			url = 'img/sc.jpg';
+		}else if(_this_==1){
+			url = 'img/sea.jpg';
+		}else if(_this_==2){
+			url = 'img/forever.jpg';
+		}else if(_this_==3){
+			url = 'img/flower.jpg';
+		}
+		*/
+		switch(_this_){
+			case '0':
+				url = 'img/sc.jpg';
+				break;
+			case '1':
+				url = 'img/sea.jpg';
+				break;
+			case '2':
+				url = 'img/forever.jpg';
+				break;
+			case '3':
+				url = 'img/flower.jpg';
+				break;
+		}
+		$("body").css({
+			background:'url('+url+') no-repeat',
+			backgroundSize:'cover'
+			});
+	});
+ </script>
  </body>
 </html>

@@ -1,3 +1,9 @@
+	a,b,span,table,tr,td,ul,ol,li,dl,dd,dt,body,html,div{
+		padding:0;
+		margin:0;
+		list-style:none;
+		text-decoration:none;
+	}
 	body{
 		background-image:url(timg.jpg);
 		background-size:cover;
@@ -12,7 +18,7 @@
 		position:absolute;
 		z-index:101;
 	}
-	a{
+	div.bd a{
 		display:block;
 		width:40px;
 		height:40px;
@@ -111,4 +117,44 @@
 		height:600px;
 		position:relative;
 		margin:50px auto;
+	}
+/*背景设计*/
+	#bgcolor{
+		position:absolute;
+		bottom:0px;
+		right:0;
+		z-index:200;
+		height:300px;
+		width:200px;
+		box-sizing:border-box;
+		background-color:#030303;
+		box-shadow:0 0 15px #fff;
+		padding:10px 10px
+	}
+	#bgcolor span{
+		color:#fff;
+		font-size:18px;
+	}
+	#bgcolor input{
+		cursor:pointer;
+		outline:0;
+		background-color:silver;
+	}
+	#bgcolor h3{
+			text-align:center;
+			color:white;
+	}
+	#bgImg li{
+		float:left;
+	}
+	#bgImg li a{
+		border:2px solid #fff;
+		background-color:#ddd;
+		text-shadow:0 0 3px #ddd;
+		height:30px;
+		width:40px;
+		margin:2px;
+		color:#303030;
+		font-size:18px;
+		border-radius:5px;
 	}
