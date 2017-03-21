@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Insert your title</title>
+		<meta charset="utf-8">
+		<style>
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('fonts/fontawesome-webfont.ttf'),url('fonts/fontawesome-webfont.woff2'),url('fonts/fontawesome-webfont.eot');
+			}
+			.fa {
+				font-family: 'FontAwesome';
+			}
+			.fa-map-marker:before {
+				content: '\f044';  /*\uf041省略为\f041*/
+			}
+			.fa-fadajing:before {
+				content: '\f012';
+			}
+			.fa-anchor:before{
+				content: '\f002';
+			}
+		</style>
+	</head>
+	<body><i class="fa fa-link"></i>
+		<h1>使用Web图标字体 - JS方案</h1>
+		<span id="s1" class="fa"></span>
+		<span id="s2" class="fa"></span>
+		
+		<script>
+		//使用JS向HTML页面中输出每个图片对应的Unicode码
+			s1.innerHTML = '\uf013 \uf1b0';
+			s1.style.color = '#f00';
+			s1.style.fontSize = '50px';
+			s2.innerHTML = '\uf011 \uf1c0 \uf2c0 \uf1c2 \ufdc0 \uf1cb \uf1a0 \uf1c0';
+			s2.style.color = '#f00';
+			s2.style.fontSize = '50px';
+		</script>
+		<hr>
+
+		<h1>使用Web图标字体 - CSS方案</h1>
+		<span class="fa fa-map-marker"></span>
+		<span class="fa fa-map-marker"></span>
+		<span class="fa fa-fadajing" style="color:#0ff; font-size: 50px;"></span>
+	</body>
+</html>
