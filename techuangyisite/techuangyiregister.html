@@ -16,10 +16,12 @@
     <![endif]-->
 </head>
 <body>
+<video id="v1" src="video/birds.mp4" width="100%" height="715px"
+             preload="metadata" loop autoplay></video>
 <div class="container">
     <div class="container-fluid">
         <div class="login_logo">
-            <img src="image/login_logo.png" alt="特创易"/>
+            <img src="img/images/login_logo.png" alt="特创易"/>
         </div>
         <div class="welcome">
             <span class="wel_reg lf">欢迎注册</span>
@@ -31,7 +33,7 @@
             <form action="#" method="post" id="registerForm"></form>
             <div class="reg_input">
                 <input form="registerForm" class="reg_input_tel"
-                       type="text" name="username" placeholder="手机号码" id="username"/>
+                       type="number" name="uname" placeholder="手机号码" id="username"/>
                 <input type="button" value="发送验证码" class="send_code"/>
                 <div id="usernameTip" class="onError">手机号码为十一位</div>
             </div>
@@ -40,7 +42,7 @@
                 <div id="codeTip" class="onfocus">请输入正确的验证码</div>
             </div>
             <div class="reg_input">
-                <input form="registerForm" type="password" placeholder="输入密码" name="userpwd" class="input_pwd"/>
+                <input form="registerForm" type="password" placeholder="输入密码" name="upwd" class="input_pwd"/>
                 <div id="userpwdTip" class="onError">密码应该在6-20个字符之间</div>
             </div>
             <div class="reg_input">
@@ -56,7 +58,7 @@
                 <a href="#">《特创易服务协议》</a>
             </div>
             <div class="btn_register">
-                <input type="submit" value="注册"/>
+                <input type="button" class="bt_submit" value="注册"/>
             </div>
             <p class="tips">
                 登录有问题请咨询QQ: <a href="#">2513556525</a>
@@ -64,10 +66,34 @@
             <div class="bottom_container">
                 <a href="#" class="btn btn-success">快速发布</a>
                 <a href="#" class="btn btn-info">电话咨询</a>
-                <a href="#" class="btn btn1 btn-danger">在线咨询</a>
+                <a href="#" class="btn btn-danger">在线咨询</a>
             </div>
         </div>
     </div>
 </div>
+<script src="js/jquery-1.10.2.js"></script>
+<script>
+    $(".bt_submit").click(function(){
+        var url = "data/techuangyiregister.php";
+        var data = $("#registerForm").serialize();
+        $.ajax({
+            type:"POST",
+            url:url,
+            data:data,
+            success:function(obj){
+                if(obj.code<0){
+                    alert("注册失败,错误原因"+obj.msg);
+                }else{
+                    alert("注册成功!3s后将自动跳转登录页面");
+                    setTimeout(function(){
+                        location.href = 'index.html';
+                    },3000);
+                }
+            },
+            error:function(){
+            }
+        });
+    });
+</script>
 </body>
 </html>

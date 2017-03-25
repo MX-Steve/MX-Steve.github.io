@@ -1,0 +1,149 @@
+/*
+*测试样式
+*初始化网页样式表
+*进行网页层级分类
+*/
+/*测试样式*/
+.header,.banner,.notification,.sort,.line,.update_info,
+.case,.modal,.onshow,.video,.line,.designers_team,.happening,.media ,
+.design_start,.partner,.float_bar,.footer_top,.footer_bottom{
+    width:1423px;
+    box-sizing:border-box;
+    background-color:#ddd;
+    margin:0 auto;
+}
+/*初始化样式*/
+    html,body,div,h1,h2,h3,h4,h5,h6,p,table,thead,tbody,
+    tfoot,tr,td,ol,li,ul,dl,dt,dd,a,b,span,pre,header,section,aside,footer,article,i,u,s{
+        padding:0; margin:0; list-style:none;
+    }
+    .rt{float:right;}
+    .lf{float:left}
+    .clear:after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+    .clearOut:before{
+        content:"table";
+        display:block;
+    }
+    a{
+        text-decoration:none;
+        color:#333;
+        font-family:"microsoft yahei";
+    }
+/*<!--头部信息与导航栏 -->*/
+    .header{
+        height:66px;
+        padding:16px 0;
+    }
+    .header .logo{
+        margin:-5px 0 0 18px;
+    }
+    .header .headlist{
+        margin-left:18px;
+    }
+    .header .headlist li{
+        float:left;
+    }
+    .header .headlist li a{
+        display:block;
+        height:32px;
+        width:112px;
+        text-align:center;
+        line-height:32px;
+    }
+    .header .headlist li a:hover{
+        color:#000;
+    }
+    .header .login,.register{
+        display:block;
+        height:32px;
+        width:64px;
+        margin:0 1px;
+        box-sizing:border-box;
+        text-align:center;
+        line-height:32px;
+    }
+    .header .login{
+        border:2px solid #000;
+    }
+/*<!--banner广告部分-->*/
+    .banner{
+        height:580px;
+    }
+/*<!--开始设计按钮-->*/
+.notification,.sort,.line,.update_info{
+    width:1170px;
+}
+    /*<!--相关公告-->*/
+    .notification{
+        height:60px;
+    }
+    /*<!--产品分类-->*/
+    .sort{
+        height:350px;
+    }
+    /*<!--分割线-->*/
+    .line{
+        height:1px;
+    }
+    /*<!-- 更新客户/顾问/创意人信息 -->*/
+    .update_info{
+        height:275px;
+    }
+
+/*<!-- 案例部分 -->*/
+.case{
+    height:1280px;
+}
+/*<!-- modal模态框内容（设计案例） -->*/
+.modal,
+/*<!-- 进行中的项目展示 -->*/
+.onshow{
+    height:631px;
+}
+/*<!-- 相关视频部分 -->*/
+.video{
+    height:447px;
+}
+/*<!-- 分割线 -->*/
+.line{
+    height:1px;
+}
+
+/*<!-- 设计师团队 -->*/
+.designers_team{
+    height:741px;
+}
+/*<!-- 媒体报道 --"特创易正在发生" -->*/
+.happening{
+    height:631px;
+}
+/*<!-- 媒体报道 -->*/
+.media{
+    height:447px;
+}
+/*<!-- 开始设计/咨询/获取建议 -->*/
+.design_start{
+    height:583px;
+}
+/*<!-- 合作伙伴信息 -->*/
+.partner{
+    height:117px;
+}
+/*<!-- 悬浮侧边栏 -->*/
+.float_bar{
+    width:60px;
+    height:240px;
+}
+/*<!-- 底部相关信息 -->*/
+.footer_top{
+    height:449px;
+ }
+/*<!-- 底部相关信息 公司信息-->*/
+.footer_bottom{
+    width:1170px;
+    height:100px;
+}
