@@ -1,0 +1,217 @@
+/*初始化页面*/
+* { box-sizing: border-box;}
+body{
+    margin:0;
+    background-color:#fff;
+    font-family: Arial;
+    font-size:1em;
+}
+html{font-size:10px;}
+h1{font-size:36px;margin:20px 0 10px;}
+h2{font-size:30px;margin:20px 0 10px;}
+h3{font-size:24px;margin:20px 0 10px;}
+h4{font-size:18px;margin:10px 0 10px;}
+h5{font-size:14px;margin:10px 0 10px;}
+h6{font-size:12px;margin:10px 0 10px;}
+p{margin:0 0 10px;}
+a{color:#337ab7;text-decoration:none;}
+img{vertical-align: middle;border:0;}
+ul{margin:0 0 10px;}
+table{border-collapse:collapse;border-spacing:0}
+a:hover{text-decoration:none;}
+.lf{float:left;}
+.rt{float:right;}
+/*定宽容器网站最外围框架*/
+.container{
+    margin: 0 auto;
+}
+.container:before,
+.container-fluid:before{
+    content:"";
+    display:table;
+}
+.container:after,
+.container-fluid:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+/*变宽容器，父容器下边框*/
+.container-fluid{
+    width:100%;
+    text-align: center;
+    padding:0;
+    margin:0 auto;
+}
+.login_logo{
+    width:100%;
+    height:115px;
+    text-align:center;
+    margin-top:40px;
+}
+.welcome{
+    width:100%;
+    height:65px;
+    line-height: 75px;
+}
+.wel_reg{
+    font-size:3rem;
+}
+.reg_form{
+    width:100%;
+    height:515px;
+}
+.login{font-size:2rem}
+.login a:hover{text-decoration: none;}
+.reg_input_tel,.input_code,.input_pwd,.input_invitecode{
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #E9F0F6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+.send_code{
+    position: absolute;
+    width: 135px;
+    height: 38px;
+    line-height:30px;
+    border: 3px solid #E0E0E0;
+    border-radius: 2px;
+    color: #7caced;
+    font-size: 14px;
+    text-align: center;
+    background: #ffffff;
+    right: 0;
+    bottom: 15px;
+    outline: none;
+}
+.onfocus,.onError{
+    position: absolute;
+    right: -18px;
+    top: -17px;
+    padding: 2px 12px;
+    line-height: 24px;
+    opacity: 0.7;
+}
+.onfocus{
+    background:#ffe59e;
+    color:#dd6300;
+}
+.onError{
+    background: #ffcccc;
+    color: #be0000;
+}
+/*阅读协议部分*/
+.reg_agreement{ text-align: left;}
+.reg_rememberme{
+    border-radius:50%;
+}
+.reg_rememberme+i{
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: 15px;
+    background: url(../remember_icon.png) center no-repeat;
+    background-size: 100% 100%;
+}
+/*注册按钮部分*/
+.btn_register{
+    width:100%;
+    height:75px;
+}
+.btn_register input{
+    width:100%;
+    height:100%;
+    font-size:2.4rem;
+    color:#fff;
+    background-color:#81AFED;
+    outline:0;
+    border:0;
+    border-radius:5%;
+}
+.btn_register input:hover{
+    background-color:#7CACED;
+}
+.btn_register input:active{
+    outline:0;
+    border:0;
+}
+
+/*登录问题咨询*/
+.tips{
+    font-size:1.5rem;
+    height:80px;
+    width:100%;
+    line-height:80px;
+}
+/*pc*/
+@media screen and (min-width:992px){
+    .container{width:970px}
+    .container-fluid{width:400px;height:715px;
+        margin-top:70px;margin-bottom:40px;}
+    .reg_input,.reg_agreement{
+        width:100%;
+        height:60px;
+        font-size:1.5rem;
+        padding-top:13px;
+        position:relative;
+    }
+    .bottom_container{display:none;}
+}
+/*pad*/
+@media screen and (max-width: 991px) and (min-width:768px){
+    .container{width:750px}
+    .container-fluid{width:100%;height:715px;
+        margin-top:40px;margin-bottom:40px;}
+    .reg_input,.reg_agreement{
+        width:100%;
+        height:60px;
+        font-size:1.5rem;
+        padding-top:13px;
+        position:relative;
+    }
+    .bottom_container{
+        height:50px;
+        width:100%;
+        border-bottom:0;
+        border-left:0;
+        border-right:0;
+        border-top:3px solid #E9E9E9;
+        position:fixed;
+        bottom:0;
+        text-align: center;
+        background:#fff;
+    }
+    .btn{width:20%;margin:0 15px;}
+}
+/*phone*/
+@media screen and (max-width:767px){
+    .container{width:100%}
+    .container-fluid{width:100%;height:715px;
+        margin-top:40px;margin-bottom:40px;}
+    .reg_input,.reg_agreement{
+        width:100%;
+        height:60px;
+        font-size:1.5rem;
+        padding-top:13px;
+        position:relative;
+    }
+    .bottom_container{
+        height:50px;
+        width:100%;
+        border-bottom:0;
+        border-left:0;
+        border-right:0;
+        border-top:3px solid #E9E9E9;
+        position:fixed;
+        background:#fff;
+        bottom:0;
+        text-align: center;
+    }
+    .btn{width:20%;margin:0 15px;}
+}
