@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title></title>
 		<link rel="stylesheet" href="qqmusic.css">
+		<link rel="stylesheet" href="carousel.css"/>
 	</head>
 	<body>
 		<!-- 页面头部信息 -->
@@ -196,48 +197,34 @@
 		<!-- 页面精彩推荐专区 -->
 		<div id="recommend">
 			<h1 class="recommend_head">精彩推荐</h1>
-			<ul class="recommend_picture">
-				<li class="pic1 current">
-					<a href="#">
-						<img src="images/recommend/recommend_1.jpg" alt="">
-					</a>
-				</li>
-				<li class="pic2">
-					<a href="#">
-						<img src="images/recommend/recommend_2.jpg" alt="">
-					</a>
-				</li>
-				<li class="pic3">
-					<a href="#">
-						<img src="images/recommend/recommend_3.jpg" alt="">
-					</a>
-				</li>
-				<li class="pic4">
-					<a href="#">
-						<img src="images/recommend/recommend_4.jpg" alt="">
-					</a>
-				</li>
-				<li class="pic5">
-					<a href="#">
-						<img src="images/recommend/recommend_5.jpg" alt="">
-					</a>
-				</li>
-				<li class="pic6">
-					<a href="#">
-						<img src="images/recommend/recommend_6.jpg" alt="">
-					</a>
-				</li>
-			</ul>
-			<p class="picture_bar">
-				<a href="#" class="bar01"></a>
-				<a href="#" class="bar02"></a>
-				<a href="#" class="bar03"></a>
-				<a href="#" class="bar04"></a>
-				<a href="#" class="bar05"></a>
-				<a href="#" class="bar06"></a>
-			</p>
-			<div class="leftchange">&lt;</div>
-			<div class="rightchange">&gt;</div>
+			<div class="J_Poster poster-main" data-setting='{
+                                               "width":1340,
+                                                "height":325,
+                                                "posterWidth":608,
+                                                "posterHeight":325,
+                                                "scale":0.8,
+                                                "verticalAlign":"middle",
+                                                "autoPlay":2000,
+                                                "speed":1000,
+                                                "delay":2000
+                                                 }'>
+        <div class="poster-btn poster-prev-btn"></div>
+        <ul class="poster-list">
+            <li class="poster-item"><a href="#"><img src="images/recommend/recommend_1.jpg"/></a></li>
+            <li class="poster-item"><a href="#"><img src="images/recommend/recommend_2.jpg"/></a></li>
+            <li class="poster-item"><a href="#"><img src="images/recommend/recommend_3.jpg"/></a></li>
+            <li class="poster-item"><a href="#"><img src="images/recommend/recommend_4.jpg"/></a></li>
+            <li class="poster-item"><a href="#"><img src="images/recommend/recommend_5.jpg"/></a></li>
+        </ul>
+        <div class="poster-btn poster-next-btn"></div>
+    </div>
+			<!-- <p class="picture_bar" id="picture_bar"> -->
+				<!-- <a href="#" class="bar01"></a> -->
+				<!-- <a href="#" class="bar02"></a> -->
+				<!-- <a href="#" class="bar03"></a> -->
+				<!-- <a href="#" class="bar04"></a> -->
+				<!-- <a href="#" class="bar05"></a> -->
+			<!-- </p> -->
 		</div>
 		<!-- 页面排行榜专区 -->
 		<div id="ranking" class="out">
@@ -636,9 +623,9 @@
 					 <input type="button" class="btn2" value="注册">
 				 </div>
 			 </div>
-		</div>
-		<!-- <script src="jquery-1.11.3.js"></script> -->
-		<!-- <script src="jquery-ui.js"></script> -->
+		</div>		
+		<script src="jq.js"></script>
+    <script src="carousel.js"></script>
 		<script>
 			btLogin.onclick = function(e){
 				e.preventDefault();
@@ -648,12 +635,15 @@
 			btClose.onclick = function(e){
 				loginParent.className = 'loginParent';
 			};
-		</script>
-		<script>
 			search.onclick=function(){
 				sub_search.style.display="block";
 			}
-		
+			/*启动旋转木马*/
+			$(function(){
+            carousel.init($(".J_Poster"));
+      });
+			/*配合旋转木马滚动的滚动条*/
 		</script>
+
 	</body>
 </html>

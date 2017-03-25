@@ -390,19 +390,9 @@
 /*--------精彩推荐部分--------*/
 	#recommend{
 		height:540px;
-		width:1200px;
+		width:1340px;
 		box-sizing:border-box;
 		margin:50px auto 20px;
-		/*设置3d距离*/
-		perspective:500px;
-	}
-	#recommend div.leftchange{
-		left:-75px;
-		top:216px;
-	}
-	#recommend div.rightchange{
-		right:-75px;
-		top:216px;
 	}
 	.recommend_head{
 		height:70px;
@@ -412,55 +402,11 @@
 		line-height:70px;
 		font-size:48px;
 	}
-	.recommend_picture{
-		height:325px;
-		width:1200px;
-		box-sizing:border-box;
-		padding-top:50px;
-		position:relative;
-		transform-style:preserve-3d;
-		transform:rotatex(0deg);
-		transition:all .5s linear;
-		overflow:hidden;
-	}
-	.recommend_picture li{
-		width:608px;
-		height:243px;
-		position:absolute;
-		right:300px;
-	}
-	.recommend_picture li a{
-		display:block;
-		width:608px;
-		height:243px;
-	}
-	.recommend_picture li a img{
-		width:608px;
-		height:243px;
-	}
-	.pic1{
-		transform:translate3d(-224px,0,0) scale(1);
-	}
-	.pic2{
-		transform:translate3d(-360px,0,0) scale(1);
-	}
-	.pic3{
-		transform:translate3d(1120px,0,0) scale(1);
-	}
-	.pic4{
-		transform:translate3d(896px,0,0) scale(1);
-	}
-	.pic5{
-		transform:translate3d(449px,0,0) scale(1);
-	}
-	.pic6{
-		transform:translate3d(0px,0,0) scale(1.2);
-	}
 	.picture_bar{
 		margin-top:50px;
 		width:1200px;
 		height:20px;
-		padding:5px 400px;
+		padding:5px 450px;
 	}
 	.picture_bar a{
 		display:block;
