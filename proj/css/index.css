@@ -1,4 +1,3 @@
-/*导航栏部分*/
 @media screen and (min-width: 768px) {
   .my-login-parent {
     position: absolute;
@@ -97,6 +96,22 @@
 @media screen and (max-width: 767px) {
   .banner {
     height: 780px;
+  }
+  .banner .my-order {
+    width: 100%;
+    height: 80px;
+    border-top: 2px solid #E9E9E9;
+    box-shadow: 0 0 5px #E9E9E9;
+    background-color: #fff;
+    position: fixed;
+    z-index: 200;
+    bottom: 0;
+    left: 0;
+  }
+  .banner .my-order .btn {
+    width: 95%;
+    margin: 20px auto;
+    background-color: #7CACED;
   }
 }
 /*<!--开始设计按钮-->*/
@@ -291,7 +306,6 @@
 /*<!-- 媒体报道 --"特创易正在发生" -->*/
 /*<!-- 媒体报道 -->*/
 /*<!-- 开始设计/咨询/获取建议 -->*/
-/*<!-- 合作伙伴信息 -->*/
 /*<!-- 悬浮侧边栏 -->*/
 @media screen and (min-width: 768px) {
   .float_bar {
@@ -300,6 +314,7 @@
     position: fixed;
     right: 20px;
     bottom: 100px;
+    z-index: 100;
   }
   .float_bar a {
     display: block;
@@ -337,6 +352,7 @@
     position: fixed;
     bottom: 10px;
     left: 20px;
+    z-index: 100;
   }
   .float_host .hi {
     position: absolute;
@@ -344,13 +360,56 @@
     right: -20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .float_bar {
+    display: none;
+  }
+  .float_host {
+    display: none;
+  }
+}
 /*<!-- 底部相关信息 -->*/
 .footer {
-  height: 726px;
+  min-height: 570px;
+  background-color: #F3F2F0;
+  /*<!-- 合作伙伴信息 -->*/
+}
+.footer .partner {
+  min-height: 120px;
+  margin-bottom: 20px;
 }
 .footer .footer_top {
-  height: 522px;
+  min-height: 350px;
+}
+.footer .footer_top .footer_logo {
+  height: 37px;
+  width: 123px;
+  margin-top: 20px;
+  margin-right: 20%;
+}
+.footer .footer_top .my-code {
+  height: 295px;
+  width: 300px;
+}
+.footer .footer_top .my-code img {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer_top .my-code img {
+    width: 100%;
+  }
+}
+.footer .footer_top ul li {
+  margin-bottom: 10px;
+}
+.footer .my-footer-line {
+  background: #DAD9D8;
 }
 .footer .footer_bottom {
-  height: 204px;
+  margin-top: 30px;
+  min-height: 100px;
+}
+.footer .footer_bottom .my-sina {
+  width: 40px;
+  height: 40px;
 }

@@ -1,4 +1,4 @@
-//导航栏部分
+/*导航栏部分*/
 @media screen and (min-width:768px) {
   .my-login-parent{
     position:absolute;
@@ -94,22 +94,6 @@
 @media screen and (max-width: 767px){
   .banner{
     height:780px;
-    .my-order{
-      width:100%;
-      height:80px;
-      border-top:2px solid #E9E9E9;
-      box-shadow: 0 0 5px #E9E9E9;
-      background-color:#fff;
-      position:fixed;
-      z-index:200;
-      bottom:0;
-      left:0;
-      .btn{
-        width:95%;
-        margin:20px auto;
-        background-color:#7CACED;
-      }
-    }
   }
 }
 /*<!--开始设计按钮-->*/
@@ -298,7 +282,6 @@
     position:fixed;
     right:20px;
     bottom:100px;
-    z-index:100;
     a{
       display:block;
       height:60px;
@@ -334,61 +317,22 @@
     position:fixed;
     bottom:10px;
     left:20px;
-    z-index: 100;
     .hi{
       position:absolute;
       top:0;right:-20px;
     }
   }
 }
-@media screen and (max-width:767px){
-  .float_bar{display:none}
-  .float_host{display:none}
-}
+
 /*<!-- 底部相关信息 -->*/
 .footer{
-  min-height:570px;
-  background-color:#F3F2F0;
+  height:726px;
   /*<!-- 合作伙伴信息 -->*/
-  .partner{
-    min-height:120px;
-    margin-bottom:20px;
-  }
+  .partner{}
   .footer_top{
-    min-height:350px;
-    .footer_logo{
-      height:37px;
-      width:123px;
-      margin-top:20px;
-      margin-right:20%;
-    }
-    .my-code{
-      height:295px;
-      width:300px;
-      img{
-        width:50%;
-      }
-      @media screen and (max-width:767px){
-        img{
-          width:100%;
-        }
-      }
-    }
-    ul{
-      li{
-        margin-bottom:10px;
-      }
-    }
-  }
-  .my-footer-line{
-    background:#DAD9D8;
+    height:522px;
   }
   .footer_bottom{
-    margin-top:30px;
-    min-height:100px;
-    .my-sina{
-      width:40px;
-      height:40px;
-    }
+    height:204px;
   }
 }
