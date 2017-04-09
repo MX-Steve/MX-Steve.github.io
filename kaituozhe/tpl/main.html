@@ -1,0 +1,75 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<!--搜索框-->
+<div class="container">
+    <div class="form-group has-feedback">
+        <input type="text"
+               ng-model="kw"
+               class="form-control" placeholder="搜索你要的课程"/>
+        <span class="form-control-feedback glyphicon glyphicon-search"></span>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-3">
+            <p>注册人数:1221</p>
+        </div>
+        <div class="col-xs-3">
+            <p>在线人数:1221</p>
+        </div>
+        <div class="col-xs-3">
+            <p>主题总数:1221</p>
+        </div>
+        <div class="col-xs-3">
+            <p>讨论圈数:1221</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="list-group">
+                <a href="#/ktzDetail/{{kind.kid}}"
+                   ng-repeat="kind in kindList"
+                   class="list-group-item">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <img class="media-object" ng-src="img/{{kind.img_sm}}"/>
+                        </div>
+                        <div class="media-body">
+                            <h3>{{kind.name}}</h3>
+                            <p class="my-price">{{kind.price | currency:'￥'}}</p>
+                            <p>{{kind.detail}}</p>
+                        </div>
+                    </div>
+                </a>
+                <button
+                        ng-click="loadMore()"
+                        ng-show="hasMore"
+                        class="btn btn-block btn-info">加载跟多</button>
+                <p ng-hide="hasMore" class="bg-warning text-danger">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                    没有更多数据可以加载了
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="list-group">
+                <a href="#/ktzDetail" class="list-group-item">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <!--<img class="media-object" src="img/" alt=""/>-->
+                        </div>
+                        <div class="media-body">
+                            <h3>小学</h3>
+                            <p>1332</p>
+                            <p>度很低，生活也颇富意味。”这些生活中常见的景象，细
+                                主题 : 《动人的北平》林语堂</p>
+                        </div>
+                    </div>
+                </a>
+                <button class="btn btn-block btn-info">加载跟多</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--列表项-->
+
+<div ng-include="'tpl/include/footer.html'"></div>

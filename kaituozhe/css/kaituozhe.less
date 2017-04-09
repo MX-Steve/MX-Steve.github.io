@@ -1,0 +1,126 @@
+
+/*底部导航栏*/
+.navbar-footer-menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  li{
+    display:inline-block;
+    width:30%;
+    line-height:60px;
+    text-align:center;
+  }
+}
+body{
+  margin-top:80px;
+  margin-bottom:200px;
+  //overflow: hidden;
+}
+.my-start-bg{
+  position:relative;
+  height:60%;
+  width:100%;
+  img{
+    height:100%;width:100%;
+  }
+  .jumbotron{
+    a {
+      text-decoration: none;
+    }
+    color:#fff;
+    width:60%;
+    height:40%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:linear-gradient(#117eff, #aefcff);
+  }
+}
+//支付页面样式设置
+.pay-info{
+  height:400px;
+  background:linear-gradient(#b8fff5, #fcecff);
+  h1{
+    color:#666;
+  }
+  .preferential{
+    height:2.4em;
+    line-height:2.4em;
+    width:70%;
+    border:1px dotted #FF5D50;
+    overflow:hidden;
+    .state{
+      display:inline-block;
+      height:2.4em;
+      width:15%;
+      color:#fff;
+      padding:0 3px;
+      background:#FF5D50;
+      border-top-right-radius:30%;
+      border-bottom-right-radius:30%;
+    }
+  }
+  .class-order{
+    margin-top:50px;
+    .pay-money{
+      display:inline-block;
+      width:30%;
+      font-size:1.8em;
+      color:red;
+    }
+  }
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+}
+.page.ng-enter,
+.page.ng-leave {
+  -webkit-transition: .5s linear all;
+  -moz-transition: .5s linear all;
+  -ms-transition: .5s linear all;
+  -o-transition: .5s linear all;
+  transition: 1s linear all;
+}
+/*准备离开*/
+.page.ng-leave {
+  left: 0;
+  opacity: 1;
+}
+/*离开完成*/
+.page.ng-leave.ng-leave-active {
+  left: -100%;
+  opacity: 0;
+}
+/*刚开始进入*/
+.page.ng-enter {
+  left: 100%;
+  opacity: 0;
+}
+/*进入完成*/
+.page.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+//主页面中的相关设计
+.list-group{
+  margin-bottom:100px;
+  p.my-price{
+    color:red;
+  }
+  p.bg-warning{
+    padding:3px 5px;
+    height:2.4em;
+    line-height:2.4em;
+    margin-top:1.2em;
+  }
+}
+//详情页面的设计
+.panel{
+  margin-bottom:100px;
+  .detail-price{
+    color:red;
+  }
+}

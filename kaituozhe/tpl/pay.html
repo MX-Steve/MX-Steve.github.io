@@ -1,0 +1,23 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container pay-info">
+    <h1 class="text-center">选择{{kind.name}}课程</h1>
+    <hr/>
+    <div class="preferential">
+        <span class="state">优惠说明</span>
+        <span class="state-right"><span>2科联报直减400元，3科联报直减600元，全科联报直减1000元 </span><a href="javascript:" id="jq-rules">详细规则</a></span>
+    </div>
+    <div class="class-order text-center" ng-hide="succMsg || errMsg">
+        <span>应付金额：</span><span class="pay-money text-left">{{kind.price|currency:'￥'}}</span>
+        <button type="button"
+                ng-click="submitOrder()"
+                class="btn btn-danger btn-lg">结算</button>
+    </div>
+    <p ng-show="succMsg">
+        {{succMsg}}
+        <button
+                ng-click="jump('/ktzPersonal')"
+                class="btn btn-lg btn-success">查看我的课程</button>
+    </p>
+    <p ng-show="errMsg">{{errMsg}}</p>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>
