@@ -1,0 +1,26 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="#/ktzMain">主页</a></li>
+        <li>详情页</li>
+    </ul>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>{{kind.name}}</h3>
+            <img ng-src="img/{{kind.img_lg}}"/>
+            <p>{{kind.detail}}</p>
+            <p class="detail-price">{{kind.price | currency:'￥'}}</p>
+        </div>
+        <div class="panel-footer text-right">
+            <button
+                    ng-click="jump('/ktzPay/'+kind.kid)"
+                    class="btn btn-success">报名参加</button>
+            <button
+                    ng-click="jump('/ktzMain')"
+                    class="btn btn-success">我在看看</button>
+        </div>
+    </div>
+</div>
+
+
+<div ng-include="'tpl/include/footer.html'"></div>

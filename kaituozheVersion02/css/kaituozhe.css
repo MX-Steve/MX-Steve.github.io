@@ -1,0 +1,131 @@
+/*底部导航栏*/
+.navbar-footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-footer-menu li {
+  display: inline-block;
+  width: 30%;
+  line-height: 60px;
+  text-align: center;
+}
+body {
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+.my-start-bg {
+  position: relative;
+  height: 60%;
+  width: 100%;
+}
+.my-start-bg img {
+  height: 100%;
+  width: 100%;
+}
+.my-start-bg .jumbotron {
+  color: #fff;
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#117eff, #aefcff);
+}
+.my-start-bg .jumbotron a {
+  text-decoration: none;
+}
+.pay-info {
+  height: 400px;
+  background: linear-gradient(#b8fff5, #fcecff);
+}
+.pay-info h1 {
+  color: #666;
+}
+.pay-info .preferential {
+  height: 2.4em;
+  line-height: 2.4em;
+  width: 70%;
+  border: 1px dotted #FF5D50;
+  overflow: hidden;
+}
+.pay-info .preferential .state {
+  display: inline-block;
+  height: 2.4em;
+  width: 15%;
+  color: #fff;
+  padding: 0 3px;
+  background: #FF5D50;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+.pay-info .class-order {
+  margin-top: 50px;
+}
+.pay-info .class-order .pay-money {
+  display: inline-block;
+  width: 30%;
+  font-size: 1.8em;
+  color: red;
+}
+.page {
+  position: absolute;
+  width: 100%;
+}
+.page.ng-enter,
+.page.ng-leave {
+  -webkit-transition: .5s linear all;
+  -moz-transition: .5s linear all;
+  -ms-transition: .5s linear all;
+  -o-transition: .5s linear all;
+  transition: 1s linear all;
+}
+/*准备离开*/
+.page.ng-leave {
+  left: 0;
+  opacity: 1;
+}
+/*离开完成*/
+.page.ng-leave.ng-leave-active {
+  left: -100%;
+  opacity: 0;
+}
+/*刚开始进入*/
+.page.ng-enter {
+  left: 100%;
+  opacity: 0;
+}
+/*进入完成*/
+.page.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+.list-group {
+  margin-bottom: 100px;
+}
+.list-group p.my-price {
+  color: red;
+}
+.list-group p.bg-warning {
+  padding: 3px 5px;
+  height: 2.4em;
+  line-height: 2.4em;
+  margin-top: 1.2em;
+}
+.panel {
+  margin-bottom: 100px;
+}
+.panel .detail-price {
+  color: red;
+}
+/*发现页面设计*/
+.news-place {
+  min-height: 100px;
+  width: 95%;
+  margin: 0 auto;
+  border: 5px solid #86fffc;
+}
+.news-place .panel {
+  margin-bottom: 0;
+}
