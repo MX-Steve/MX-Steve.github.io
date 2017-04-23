@@ -1,0 +1,212 @@
+/*导航栏部分*/
+@media screen and (min-width:768px) {
+  .my-login-parent{
+    position:absolute;
+    right:20px;
+  }
+}
+@media screen and (max-width:767px) {
+  .my-login-parent{
+    position:absolute;
+    right:20px;
+    top:0;
+    .my-login{
+      font-size:1.4rem;
+      margin:0;
+      padding:0;
+      height:25px;
+      width:45px;
+      text-align:center;
+      line-height:25px;
+    }
+  }
+  .navbar-brand img{
+    width:100px;
+    //margin-left:150%;
+    position:absolute;
+    top:20px;
+    left:40%;
+   }
+  .my-hamburger{
+    position:absolute;
+    left:5px;
+    top:-10px;
+    border:0;
+    .icon-bar{
+      border:2px solid #333;
+    }
+  }
+}
+.my-login{
+  border:2px solid #333;
+  color:#333;
+}
+.my-register{
+  color:#333;
+}
+/*主题标题*/
+.my-head{
+  line-height:65px;
+  color:#333;
+  font-size:2.4em;
+  padding-top:15px;
+}
+/*主题标题列表部分*/
+.my-title {
+  height:80px;
+  line-height:80px;
+  margin-bottom:10px;
+  li{
+    height:80px;
+    line-height:80px;
+    padding:0 30px;
+    border-bottom:2px solid #EDF0EF;
+    cursor:pointer;
+  }
+  li.active{border-bottom-color:#7CACED}
+}
+
+@media screen and (max-width: 767px){
+  .my-title{
+    li{
+      padding:0 10px;
+    }
+  }
+}
+/*轮播图*/
+.my-row{
+  position:absolute;
+  z-index:2;
+  top:35%;
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  text-align:center;
+  line-height: 40px;
+  background:#fff;
+  a{
+    color:#aaa;font-size:24px;
+    font-weight:bold;text-decoration:none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.my-row-left{left:0;}
+.my-row-right{right:0;}
+.my-itemlist{
+  float:left;
+  width:100%;
+  height:185px;
+  position:relative;
+  padding-top:20px;
+  overflow:hidden;
+  ul{
+    width:21060px;
+    height:185px;
+    list-style: none;
+    position:absolute;
+    top:20px;left:0;
+    transition:all 2s ease;
+    li{
+      cursor: pointer;
+      width:218px;
+      height:122px;
+      float:left;
+      border:2px solid #7CACED;
+      position:relative;
+      margin-right:20px;
+      //margin-left: -10px;
+      left:-30px;
+      transition:all 0.5s ease;
+      &:hover{
+        border:2px solid #0508ed;
+        transform:scale(1.1);
+      }
+      .my-title{
+        position:absolute;
+        bottom:0;left:0;
+        padding:0 0 5px 10px;
+        color:#fff;
+      }
+      .my-arrow{
+        border:10px solid transparent;
+        border-top-color:#7CACED;
+        position:absolute;
+        bottom:-20px;left:50%;
+        z-index: 2;
+      }
+    }
+  }
+}
+/*价格*/
+.my-price{
+  .panel-heading{
+    height:110px;
+    p{
+      font-size:1.6em;
+      height:34px;
+      line-height:34px;
+    }
+    span{
+      font-size:1.3em;
+      height:37px;
+      line-height:37px;
+    }
+  }
+  ul{
+    padding:5px 0 5px 5px;
+    li{
+      margin-bottom:1.4em;
+    }
+    i{
+      display:inline-block;
+      height:24px;
+      width:24px;
+      color:#ccc;
+      font-size:18px;
+      text-align:center;
+      line-height:18px;
+      border-radius:50%;
+      border:2px solid #ccc;
+      &:hover{
+        color:#7CACED;
+        border-color:#7CACED;
+      }
+    }
+    .my-tips{
+      padding:10px;
+      p{
+        line-height:2em;
+      }
+      position:absolute;
+      .caret{
+        position:absolute;
+        border:10px solid transparent;
+        border-bottom-color:#7CACED;
+        bottom:-10px;left:50%;
+      }
+    }
+  }
+}
+.pri-box(@backgroundcolor,@color){
+  .panel-heading,.btn{
+    background-color:@backgroundcolor;
+    color:#fff;
+  }
+  .glyphicon-ok{
+    color:@color;
+  }
+}
+.my-price-1{
+  .pri-box(#C190E3,#C190E3);
+}
+.my-price-2{
+  .pri-box(#7CACED,#7CACED);
+}
+.my-price-3{
+  .pri-box(#44E7B9,#44E7B9);
+}
+.my-price-4{
+  .pri-box(#FF507C,#FF507C);
+}

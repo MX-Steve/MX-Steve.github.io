@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>特创易主页</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/respond.min.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+<body>
+
+<!--网页头部信息头部-->
+<div class="nav navbar-default">
+    <div class="container-fluid">
+        <!--第一部分：导航条头部   品牌  汉堡包-->
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+                <img style="margin-top:-12px;" src="img/images/login_logo.png" alt="特创易"/>
+            </a>
+            <a href="#my-menu" class="navbar-toggle my-hamburger" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class=" my-login-parent nav navbar-nav">
+                <!--导航条中的超链接-->
+                <a href="#" data-toggle="modal" data-target="#myModal" class="btn navbar-btn my-login">登录</a>
+                <!--注册-->
+                <a href="techuangyiregister.html" class="btn navbar-btn hidden-xs my-register">注册</a>
+            </div>
+        </div>
+        <!--第二部分：折叠部分 导航条主体 按钮 + 超链接 + 导航-->
+        <div id="my-menu" class="navbar-collapse collapse">
+            <!--导航条中的导航-->
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown">服务分类
+                        <span class="glyphicon glyphicon-chevron-down"></span></a>
+                    <ul class="dropdown-menu" style="min-width:200px;">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">LOGO设计|品牌设计
+                                <span style="float:right;" class="glyphicon glyphicon-chevron-right"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">LOGO设计|商标设计</a></li>
+                                <li><a href="#">吉祥物设计|卡通形象设计</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">产品包装设计
+                                <span style="float:right;"  class="glyphicon glyphicon-chevron-right"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">主包装外观设计</a></li>
+                                <li><a href="#">包装箱外观设计</a></li>
+                                <li><a href="#">手机袋设计|环保袋设计</a></li>
+                                <li><a href="#">餐盒图案设计</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">广告设计
+                                <span style="float:right;"  class="glyphicon glyphicon-chevron-right"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">广告单页设计(单面)</a></li>
+                                <li><a href="#">广告单页设计(双面)</a></li>
+                                <li><a href="#">广告折页设计</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">知识产权保护
+                                <span  style="float:right;" class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">商标注册查询</a></li>
+                                <li><a href="#">商标申请代理</a></li>
+                                <li><a href="#">著作权申请代理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">平台介绍</a></li>
+                <li><a href="#">案例</a></li>
+                <li><a href="#">客户</a></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container-fuid">
+    <!--banner广告部分-->
+    <div class="container-fluid">
+        <div class="row banner">
+            <div class="col-xs-12 col-sm-5">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-push-4 banner-left">
+                        <h1>体验全新的设计引擎</h1>
+                        <p>特创易是开创性的平台化超级设计公司</p>
+                        <ul class="list-unstyled">
+                            <li> <span class="glyphicon glyphicon-ok-circle"></span> <strong>1692 </strong> 位认证一线创意人为你服务</li>
+                            <li> <span class="glyphicon glyphicon-ok-circle"></span> <strong>2090 </strong>个订单已完成交付</li>
+                            <li> <span class="glyphicon glyphicon-ok-circle"></span> <strong>98.13% </strong> 的客户给出好评</li>
+                        </ul>
+                        <div class="my-order">
+                            <a href="techuangyiorders.html" class="btn btn-info btn-lg btn-block">发布需求</a>
+                        </div>
+                          </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-7">
+                <div class="banner-right"></div>
+            </div>
+        </div>
+    </div>
+    <!--开始设计按钮-->
+    <!--相关公告-->
+    <div class="container notification">
+        <div class="row">
+            <div class="col-xs-1 notification-left">
+                <span class="glyphicon glyphicon-volume-up"></span>
+            </div>
+            <div class="col-xs-11 notification-right">
+                <ul class="list-unstyled">
+                    <li>
+                        <strong>三弟品牌设计已报名了项目：新疆果品有限公司</strong>
+                        <span>2017-03-18 16:29:13</span>
+                    </li>
+                    <li>
+                        <strong>三弟品牌设计已报名了项目：新疆果品有限公司</strong>
+                        <span>2017-03-18 16:29:13</span>
+                    </li>
+                    <li>
+                        <strong>三弟品牌设计已报名了项目：新疆果品有限公司</strong>
+                        <span>2017-03-18 16:29:13</span>
+                    </li>
+                    <li>
+                        <strong>三弟品牌设计已报名了项目：新疆果品有限公司</strong>
+                        <span>2017-03-18 16:29:13</span>
+                    </li>
+                    <li>
+                        <strong>三弟品牌设计已报名了项目：新疆果品有限公司</strong>
+                        <span>2017-03-18 16:29:13</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--产品分类-->
+    <div class="container sort">
+        <div class="row">
+            <div class="col-xs-6 col-sm-2 col-sm-offset-1">
+                <div class="thumbnail">
+                    <div class="picture">
+                        <img class="img-responsive" src="img/picture/sort_01.png"/>
+                    </div>
+                    <div class="caption text-center">
+                        <h4>LOGO设计</h4>
+                        <p>不让品牌输在起跑线上</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-2">
+                <div class="thumbnail">
+                    <div class="picture">
+                        <img class="img-responsive" src="img/picture/sort_02.png"/>
+                    </div>
+                    <div class="caption text-center">
+                        <h4>吉祥物/卡通形象设计</h4>
+                        <p>品牌人格化必须</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-2">
+                <div class="thumbnail">
+                    <div class="picture">
+                        <img class="img-responsive" src="img/picture/sort_03.png"/>
+                    </div>
+                    <div class="caption text-center">
+                        <h4>主包装外观设计</h4>
+                        <p>表里如一 不符匠心</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-2">
+                <div class="thumbnail">
+                    <div class="picture">
+                        <img class="img-responsive" src="img/picture/sort_04.png"/>
+                    </div>
+                    <div class="caption text-center">
+                        <h4>手提袋/环保袋设计</h4>
+                        <p>让人把品牌提走</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-2">
+                <div class="thumbnail">
+                    <div class="picture">
+                        <img class="img-responsive" src="img/picture/sort_05.png"/>
+                    </div>
+                    <div class="caption text-center">
+                        <h4>广告折页设计</h4>
+                        <p>总有一款你喜欢</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 my-checksort">
+                <a href="#" class="btn btn-default btn-lg">查看全部分类</a>
+            </div>
+        </div>
+    </div>
+    <!--分割线-->
+    <div class="container line"></div>
+    <!-- 更新客户/顾问/创意人信息 -->
+    <div class="container update_info">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="my-custom">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_3.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是客户，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_5.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是客户，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_7.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是客户，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_8.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是客户，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_9.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是客户，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_10.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是客户，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="my-helper">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_28.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是顾问，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_29.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是顾问，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_30.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是顾问，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-4 my-creator">
+                <div class="my-helper">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_33.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_34.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_35.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_36.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_37.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_38.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="img/picture/tcy_avatar_39.png"
+                                         data-container="body"
+                                         data-toggle="popover" data-placement="top"
+                                         data-content="我是创作者，我可以通过网站、分享并给出反馈。享受高品质的服务"/>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading">客户
+                                        <span>158****5965</span>
+                                    </h3>
+                                    <div class="detail">
+                                        <strong>选定了中标方案</strong>
+                                    </div>
+                                    <p>16:48</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 my-info-bottom">
+                <p class="text-center">项目直播数据，全部来源于特创易作业交付平台</p>
+            </div>
+        </div>
+    </div>
+    <!-- 案例部分 -->
+    <div class="container-fluid case-parent">
+        <div class="row my-title">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                <h2>事实胜于雄辩的真实出品品质</h2>
+                <h2>均来自特创易</h2>
+                <p>唯有在特创易，你可以获得来自多支认证专业团队的轻PK方案并选择最佳方案深化完成</p>
+                <div class="my-short-line"></div>
+            </div>
+        </div>
+        <div class="row my-case">
+            <div class="col-xs-2">
+                <div class="my-month text-center">
+                    <h4>Feb. <span class="my-caret"></span></h4>
+                    <p>2月出品</p>
+                </div>
+            </div>
+            <div class="col-xs-10">
+                <div class="my-works">
+                    <ul class="owl-carousel1 list-inline">
+                        <li class="item">
+                            <div class="thumbnail">
+                                <img src="img/picture/mywork01.jpg"/>
+                                <caption>
+                                    <h3 class="editor">趣包包</h3>
+                                    <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                    </p>
+                                </caption>
+                            </div>
+                            <div class="item_hover hidden-xs text-center"
+                                 data-toggle="modal">
+                                <div class="top">
+                                    <img src="img/picture/sort_01.png"/>
+                                    <h4>LOGO设计|商标设计</h4>
+                                    <p>强头草</p>
+                                </div>
+                                <div class="row bottom">
+                                    <div class="col-sm-4">
+                                        <p>17</p>
+                                        <p>灵感</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>8</p>
+                                        <p>方案</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>3</p>
+                                        <p>团队</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <img src="img/picture/mywork01.jpg"/>
+                                <caption>
+                                    <h3 class="editor">趣包包</h3>
+                                    <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                    </p>
+                                </caption>
+                            </div>
+                            <div class="item_hover hidden-xs text-center"
+                                 data-toggle="modal">
+                                <div class="top">
+                                    <img src="img/picture/sort_01.png"/>
+                                    <h4>LOGO设计|商标设计</h4>
+                                    <p>强头草</p>
+                                </div>
+                                <div class="row bottom">
+                                    <div class="col-sm-4">
+                                        <p>17</p>
+                                        <p>灵感</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>8</p>
+                                        <p>方案</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>3</p>
+                                        <p>团队</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <img src="img/picture/mywork01.jpg"/>
+                                <caption>
+                                    <h3 class="editor">趣包包</h3>
+                                    <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                    </p>
+                                </caption>
+                            </div>
+                            <div class="item_hover hidden-xs text-center"
+                                 data-toggle="modal">
+                                <div class="top">
+                                    <img src="img/picture/sort_01.png"/>
+                                    <h4>LOGO设计|商标设计</h4>
+                                    <p>强头草</p>
+                                </div>
+                                <div class="row bottom">
+                                    <div class="col-sm-4">
+                                        <p>17</p>
+                                        <p>灵感</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>8</p>
+                                        <p>方案</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p>3</p>
+                                        <p>团队</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- modal模态框内容（设计案例）-->
+        <div class="my-modal">
+            <div class="row first-line">
+                <ul class="owl-carousel2 jq_hover1 col-xs-12 list-inline">
+                    <li class="item" >
+                        <div class="thumbnail">
+                            <img src="img/picture/first01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                                data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnail">
+                            <img src="img/picture/first01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnail">
+                            <img src="img/picture/first01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnail">
+                            <img src="img/picture/first01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row second-line">
+                <ul class="jq_hover2 col-xs-12 list-inline">
+                    <li>
+                        <div class="thumbnail">
+                            <img src="img/picture/second01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail">
+                            <img src="img/picture/second01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail">
+                            <img src="img/picture/second01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail">
+                            <img src="img/picture/second01.jpeg"/>
+                            <caption>
+                                <h3 class="editor">趣包包</h3>
+                                <p>完成于03月17日
+                                    <span class="text-right">
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_yellow.png"/>
+                                        <img src="img/images/tcy_new_star_gray_1.png"/>
+                                    </span>
+                                </p>
+                            </caption>
+                        </div>
+                        <div class="item_hover hidden-xs text-center"
+                             data-toggle="modal">
+                            <div class="top">
+                                <img src="img/picture/sort_01.png"/>
+                                <h4>LOGO设计|商标设计</h4>
+                                <p>强头草</p>
+                            </div>
+                            <div class="row bottom">
+                                <div class="col-sm-4">
+                                    <p>17</p>
+                                    <p>灵感</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>8</p>
+                                    <p>方案</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>3</p>
+                                    <p>团队</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 进行中的项目展示 -->
+        <div class="my-onshow">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                    <h1>正在进行的项目</h1>
+                    <div class="my-short-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="owl-carousel3 list-inline examples">
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">123康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="row">
+                                <div class="col-xs-7 item_info">
+                                    <a href="#" class="item_info_title">康园装饰LOGO设计</a>
+                                    <p class="item_info_sorts">
+                                        <span class="sort1">商务舱套餐</span>
+                                        <span>LOGO设计|商标设计</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width:90%;background:#58E9BE"></div>
+                                    </div>
+                                    <p class="progress-text">方案深化中</p>
+                                    <div class="item-num">
+                                        报名：<span>41</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 item_img">
+                                    <a href="#">
+                                        <img src="img/picture/example01.jpg" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row item_tips">
+                                <div class="col-xs-12">
+                                    <span>传统</span>
+                                    <span>现代</span>
+                                    <span>国际</span>
+                                    <span>稳重</span>
+                                    <span>专业</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 相关视频部分 -->
+    <div class="video">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                    <h1>客户评价</h1>
+                    <p>对那些追求设计品质并渴求经济的品牌而言，特创易是最佳伙伴</p>
+                    <div class="my-short-line"></div>
+                </div>
+            </div>
+            <div class="hidden-xs my-content">
+                <div class="video-item video1">
+                        <div class="container-fluid video_con">
+                            <video id="video1"
+                                    width="100%"
+                                    preload="none"
+                                    poster="img/picture/video01.jpg"
+                                    src="http://statics.techuangyi.com/uploadfile/2016/0809/20160809015324861.mp4"></video>
+                            <a href="#" class="video_btn video_btn_01"></a>
+                        </div>
+                        <div class="container-fluid video_explain">
+                            <h4>天使汇-刘浩</h4>
+                            <p>特创易平台上的设计师质量很高，他们很好的解决了我们的品牌问题及诉...</p>
+                        </div>
+                    </div>
+                <div class="btn btn-default btn-more">跟多客户反馈</div>
+                <div class="video-item video2">
+                        <div class="container-fluid video_con">
+                            <video id="video2"
+                                    width="100%"
+                                    preload="none"
+                                    poster="img/picture/video02.jpg"
+                                    src="http://statics.techuangyi.com/uploadfile/2016/0809/20160809015355572.mp4"></video>
+                            <a href="#" class="video_btn video_btn_02"></a>
+                        </div>
+                        <div class="container-fluid video_explain">
+                            <h4>邛崃特殊教育学校-谭蕾</h4>
+                            <p>这么有爱心有责任感的公司，一定能够尽心尽力的做好每一件事情，我祝福你们越来越好！</p>
+                        </div>
+                    </div>
+                <div class="video-item video3">
+                        <div class="container-fluid video_con">
+                            <video id="video3"
+                                    width="100%"
+                                    preload="none"
+                                    poster="img/picture/video03.jpg"
+                                    src="http://statics.techuangyi.com/uploadfile/2016/0809/20160809015422747.mp4"></video>
+                            <a href="#" class="video_btn video_btn_03"></a>
+                        </div>
+                        <div class="container-fluid video_explain">
+                            <h4>好车无忧-李鹏</h4>
+                            <p>特创易的LOGO设计非常符合我们的预期，使用以后反响很好，感觉特创易团队非常靠谱。</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row hidden-sm hidden-md hidden-lg my-content-xs">
+                <div class="col-xs-12 video-item video1">
+                    <div class="container-fluid video_con">
+                        <video
+                                width="100%"
+                                preload="none"
+                                poster="img/picture/video01.jpg"
+                                src="http://statics.techuangyi.com/uploadfile/2016/0809/20160809015324861.mp4"></video>
+                        <a href="#" class="video_btn video_btn_01"></a>
+                    </div>
+                    <div class="container-fluid video_explain">
+                        <h4>天使汇-刘浩</h4>
+                        <p>特创易平台上的设计师质量很高，他们很好的解决了我们的品牌问题及诉...</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 video-item video2">
+                    <div class="container-fluid video_con">
+                        <video
+                                width="100%"
+                                preload="none"
+                                poster="img/picture/video02.jpg"
+                                src="http://statics.techuangyi.com/uploadfile/2016/0809/20160809015355572.mp4"></video>
+                        <a href="#" class="video_btn"></a>
+                    </div>
+                    <div class="container-fluid video_explain">
+                        <h4>邛崃特殊教育学校-谭蕾</h4>
+                        <p>这么有爱心有责任感的公司，一定能够尽心尽力的做好每一件事情，我祝福你们越来越好！</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 video-item video3">
+                    <div class="container-fluid video_con">
+                        <video
+                                width="100%"
+                                preload="none"
+                                poster="img/picture/video03.jpg"
+                                src="http://statics.techuangyi.com/uploadfile/2016/0809/20160809015422747.mp4"></video>
+                        <a href="#" class="video_btn"></a>
+                    </div>
+                    <div class="container-fluid video_explain">
+                        <h4>好车无忧-李鹏</h4>
+                        <p>特创易的LOGO设计非常符合我们的预期，使用以后反响很好，感觉特创易团队非常靠谱。</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 btn btn-default btn-more">跟多客户反馈</div>
+            </div>
+        </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="container line"></div>
+    <!-- 设计师团队 -->
+    <div class="designers_team">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                    <h1>只有好创意人才可能做出好创意</h1>
+                    <p>特创易认证成员平均拥有7.14年行业经验，特创易以有保障的交易机制公平善待成员
+                        让1692个有专业追求的创意成员为你提供用心的服务</p>
+                    <div class="my-short-line"></div>
+                </div>
+            </div>
+            <div class="row team_con">
+                <div class="col-sm-12">
+                    <div class="container">
+                        <div class="box">
+                            <div class="box_con img_90 mt100 img_delay_6 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-96.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="0">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/1/96/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>森路</p></div>
+                                    <div class="tips"><span>合作愉快！</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_80 mt110 img_delay_3 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-2071.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="1">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/3/2071/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>本形</p></div>
+                                    <div class="tips"><span>我最近不太忙，可以接单评级</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_90 mt40 img_delay_2 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-197.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="2">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/1/197/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>禾美木扬 · 品牌美学</p></div>
+                                    <div class="tips"><span>我最近不太忙，可以接单评级</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                            <!--这个没有鼠标悬停-->
+                            <div class="box_con img_70 mt40 img_delay_4 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-35.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="3">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/1/35/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>東原新邦</p></div>
+                                    <div class="tips"><span>很乐意为您效劳~</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <!--这个没有鼠标悬停-->
+                            <div class="box_con img_60 img_delay_5 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-391.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="4">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/1/391/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>形动力</p></div>
+                                    <div class="tips"><span>最近非常忙，先不接单了</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                            <div class="box_con img_100 mt30 img_delay_1 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-4296.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="5">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/5/4296/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>良品易德</p></div>
+                                    <div class="tips"><span>最近不忙，可以接单</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                            <div class="box_con img_80 mt30 img_delay_3 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-4119.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="6">
+                                    <img class="mb10 img_gray" src="http://pro.statics.techuangyi.com/avatar/1/5/4119/100x100.jpg">
+                                    <div class="info"><p>知力品牌设计</p></div>
+                                    <div class="tips"><span>我最近不太忙，可以接单评级</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_90 mt40 img_delay_2 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-4960.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="7">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/5/4960/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>狮子视觉</p></div>
+                                    <div class="tips"><span>最近不太忙，可以接单</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                            <div class="box_con img_70 mt40 img_delay_2 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-682.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="8">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/1/682/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>柳岸青蝉</p></div>
+                                    <div class="tips"><span>期待与您的合作</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_80 mt110 img_delay_3 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-4113.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="9">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/5/4113/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>毕加索</p></div>
+                                    <div class="tips"><span>期待我的惊喜吧</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_80 mt40 img_delay_3 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-1729.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="10">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/2/1729/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>狮维视觉</p></div>
+                                    <div class="tips"><span>期待成为您的创意人哦！</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                            <div class="box_con img_90 mt20 img_delay_6 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-1159.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="11">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/2/1159/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>纳智</p></div>
+                                    <div class="tips"><span>期待与您的合作~</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <!--这个没有鼠标悬停-->
+                            <div class="box_con img_70 mt120 img_delay_4 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-1822.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="12">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/2/1822/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>阿涛</p></div>
+                                    <div class="tips"><span>认真做好每一单</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_80 mt110 img_delay_3 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-3874.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="13">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/4/3874/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>芬奇品牌设计创意人</p></div>
+                                    <div class="tips tips_right"><span>最近不忙，可以接单</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_con img_70 mt120 img_delay_4 des_animate">
+                                <!--<a target="_blank" href="http://www.techuangyi.com/tzone-2743.html">-->
+                                <div class="con" data-toggle="modal" data-target="#designers_team_con" id="14">
+                                    <img src="http://pro.statics.techuangyi.com/avatar/1/3/2743/100x100.jpg" class="img_gray">
+                                    <div class="info"><p>字侠</p></div>
+                                    <div class="tips tips_right"><span>字侠，会设计侠客</span><div class="arrow"></div></div>
+                                </div>
+                                <!--</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row team_btn">
+                <div class="col-xs-12 col-sm-3 col-sm-offset-3 text-right">
+                    <a href="#" class="btn btn-block btn-creator">发现创意人 <sup>Beta</sup></a>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <a href="#" class="be-man">成为签约创意人</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 媒体报道 --"特创易正在发生" -->
+    <div class="happening">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                    <h1>平台报道</h1>
+                    <div class="my-short-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="panel text-center">
+                        <div class="panel-heading">
+                            <a href="#"><img class="img-responsive" src="img/picture/panel01.jpg"/></a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h3><a href="#">虎嗅F&M创新节：特创易|如何用传统思想</a></h3>
+                            <p><a href="#">特创易CEO陶艺夫受邀参加虎嗅F&M，在北京国家会议中心进行了...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a href="#"><img class="img-responsive" src="img/picture/panel02.jpg"/></a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h3><a href="#">特创易荣获2016年度“中国企业服务创新</a></h3>
+                            <p><a href="#">特创易是唯一获奖的设计类服务平台。2016年度“中国企业服务创新...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a href="#"><img class="img-responsive" src="img/picture/panel03.jpg"/></a>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h3><a href="#">特创易受邀参加中国版权保护中心的DC</a></h3>
+                            <p><a href="#">2016年2月25日，中国版权保护中心成功举行第六届DCI体系论坛，特创...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="container line"></div>
+    <!-- 媒体报道 -->
+    <div class="my_media">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                    <h1>媒体报道</h1>
+                    <p>26家主流媒体对特创易进行过专访或相关报道</p>
+                    <div class="my-short-line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse01.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse02.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse03.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse04.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse05.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse06.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse07.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse08.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse09.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse10.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse11.jpg"/>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" src="img/picture/mediahouse12.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 开始设计/咨询/获取建议 -->
+    <div class="container design_start">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="panel">
+                    <div class="panel-heading text-center">
+                        <img src="img/picture/photo_new_start_2.png"/>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="hidden-xs my-total"></div>
+                        <div class="my-body">
+                            <h4>别再犹豫</h4>
+                            <h4>立即创建需求</h4>
+                        </div>
+                        <a href="#" class="btn btn-block my-require">发布需求</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="panel">
+                    <div class="panel-heading text-center">
+                        <img src="img/picture/photo_new_service.png"/>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="my-total">
+                            <h3>400-303-5256</h3>
+                        </div>
+                        <div class="my-body">
+                            <span>周一至周五09:00-19:00 （仅收市话费）</span>
+                            <p>输入您的电话 ，我们立即给您回电</p>
+                        </div>
+                        <div class="my-free input-group">
+                            <input type="text" class="form-control" placeholder="输入联系电话"/>
+                            <a href="#" class="input-group-addon btn btn-info btn-block">免费接通</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="panel">
+                    <div class="panel-heading text-center">
+                        <img src="img/picture/photo_new_pm.png"/>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="my-total">
+                            <span>值班项目顾问-温馨</span>
+                        </div>
+                        <div class="my-body">
+                            <h4>在线咨询</h4>
+                            <h4>立刻获得专业建议</h4>
+                        </div>
+                        <a href="#" class="btn btn-block my-require">立即咨询</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 my-order">
+                <ul class="list-unstyled">
+                    <li class="text-center">182****5001提交了一个平面设计的需求意向 <span>10分钟前</span></li>
+                    <li class="text-center">182****5001提交了一个平面设计的需求意向 <span>10分钟前</span></li>
+                    <li class="text-center">182****5001提交了一个平面设计的需求意向 <span>10分钟前</span></li>
+                    <li class="text-center">182****5001提交了一个平面设计的需求意向 <span>10分钟前</span></li>
+                    <li class="text-center">182****5001提交了一个平面设计的需求意向 <span>10分钟前</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 悬浮侧边栏 -->
+    <div class="float_bar">
+        <a href="#" class="aside1"></a>
+        <a href="#" class="aside2"></a>
+        <a href="#" class="aside3"></a>
+        <a href="#" class="aside4"></a>
+    </div>
+    <!--左下侧照片-->
+    <div class="float_host">
+        <img class="img-responsive" src="img/picture/footer_person_2_2.png"/>
+        <span class="hi">
+            <img src="img/picture/t_footer_hi.png"/>
+        </span>
+    </div>
+</div>
+<div class="footer" ng-controller="myCtrlFooter">
+    <!-- 合作伙伴信息 -->
+    <div class="container">
+        <div class="row partner">
+            <div class="col-xs-3 col-sm-2 col-md-1" ng-repeat="temp in partners">
+                <img class="img-responsive" ng-src="img/picture/{{temp}}"/>
+            </div>
+        </div>
+        <!-- 底部相关信息 -->
+        <div class="row footer_top">
+            <div class="hidden-xs col-sm-2 col-sm-offset-1">
+                <div class="footer_logo">
+                    <img class="img-responsive" src="img/picture/footer-logo.png"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <h3>客户</h3>
+                <ul class="list-unstyled">
+                    <li ng-repeat="value in footerTopClients track by $index"><a href="#">{{value.name}}</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <h3>创意人</h3>
+                <ul class="list-unstyled">
+                    <li ng-repeat="value in footerTopCreators"><a href="#">{{value.name}}</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <h3>关于特创易</h3>
+                <ul class="list-unstyled">
+                    <li ng-repeat="value in footerTopAboutTcy"><a href="#">{{value.name}}</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <h3>客服电话</h3>
+                <h4><strong>400-0202-8285</strong></h4>
+                <div class="my-code">
+                    <img src="img/picture/footer-qrcode_2.jpg"/>
+                </div>
+            </div>
+        </div>
+        <!-- 分割线 -->
+        <div class="line my-footer-line"></div>
+        <!-- 底部相关信息 公司信息-->
+        <div class="row footer_bottom">
+            <div class="col-xs-10">
+                <p>北京易创意科技有限公司©版权所有京ICP证060883号</p>
+            </div>
+            <div class="col-xs-2">
+                <div class="my-sina">
+                    <img src="img/picture/footer-sina2.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录摸态框-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">用户登录</h4>
+            </div>
+            <div class="modal-body">
+                 <form>
+                     <div class="form-group">
+                         <label class="control-label">用户名：</label>
+                         <input class="form-control" type="text" id="uname" name="uname" placeholder="请输入用户名"/>
+                     </div>
+                     <div class="form-group">
+                         <label class="control-label">密码：</label>
+                         <input class="form-control" type="password" id="upwd" name="upwd" placeholder="请输入密码"/>
+                     </div>
+                     <div class="form-group text-center ">
+                         <button class="btn btn-primary btn-lg" type="submit">进入特创易</button>
+                     </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.10.2.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/bootlint.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

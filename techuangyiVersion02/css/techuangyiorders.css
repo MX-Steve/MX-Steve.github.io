@@ -1,0 +1,228 @@
+/*导航栏部分*/
+@media screen and (min-width: 768px) {
+  .my-login-parent {
+    position: absolute;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .my-login-parent {
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+  .my-login-parent .my-login {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 45px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .navbar-brand img {
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 40%;
+  }
+  .my-hamburger {
+    position: absolute;
+    left: 5px;
+    top: -10px;
+    border: 0;
+  }
+  .my-hamburger .icon-bar {
+    border: 2px solid #333;
+  }
+}
+.my-login {
+  border: 2px solid #333;
+  color: #333;
+}
+.my-register {
+  color: #333;
+}
+/*主题标题*/
+.my-head {
+  line-height: 65px;
+  color: #333;
+  font-size: 2.4em;
+  padding-top: 15px;
+}
+/*主题标题列表部分*/
+.my-title {
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 10px;
+}
+.my-title li {
+  height: 80px;
+  line-height: 80px;
+  padding: 0 30px;
+  border-bottom: 2px solid #EDF0EF;
+  cursor: pointer;
+}
+.my-title li.active {
+  border-bottom-color: #7CACED;
+}
+@media screen and (max-width: 767px) {
+  .my-title li {
+    padding: 0 10px;
+  }
+}
+/*轮播图*/
+.my-row {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+}
+.my-row a {
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.my-row a:hover {
+  text-decoration: none;
+}
+.my-row-left {
+  left: 0;
+}
+.my-row-right {
+  right: 0;
+}
+.my-itemlist {
+  float: left;
+  width: 100%;
+  height: 185px;
+  position: relative;
+  padding-top: 20px;
+  overflow: hidden;
+}
+.my-itemlist ul {
+  width: 21060px;
+  height: 185px;
+  list-style: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transition: all 2s ease;
+}
+.my-itemlist ul li {
+  cursor: pointer;
+  width: 218px;
+  height: 122px;
+  float: left;
+  border: 2px solid #7CACED;
+  position: relative;
+  margin-right: 20px;
+  left: -30px;
+  transition: all 0.5s ease;
+}
+.my-itemlist ul li:hover {
+  border: 2px solid #0508ed;
+  transform: scale(1.1);
+}
+.my-itemlist ul li .my-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 5px 10px;
+  color: #fff;
+}
+.my-itemlist ul li .my-arrow {
+  border: 10px solid transparent;
+  border-top-color: #7CACED;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  z-index: 2;
+}
+/*价格*/
+.my-price .panel-heading {
+  height: 110px;
+}
+.my-price .panel-heading p {
+  font-size: 1.6em;
+  height: 34px;
+  line-height: 34px;
+}
+.my-price .panel-heading span {
+  font-size: 1.3em;
+  height: 37px;
+  line-height: 37px;
+}
+.my-price ul {
+  padding: 5px 0 5px 5px;
+}
+.my-price ul li {
+  margin-bottom: 1.4em;
+}
+.my-price ul i {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+.my-price ul i:hover {
+  color: #7CACED;
+  border-color: #7CACED;
+}
+.my-price ul .my-tips {
+  padding: 10px;
+  position: absolute;
+}
+.my-price ul .my-tips p {
+  line-height: 2em;
+}
+.my-price ul .my-tips .caret {
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom-color: #7CACED;
+  bottom: -10px;
+  left: 50%;
+}
+.my-price-1 .panel-heading,
+.my-price-1 .btn {
+  background-color: #C190E3;
+  color: #fff;
+}
+.my-price-1 .glyphicon-ok {
+  color: #C190E3;
+}
+.my-price-2 .panel-heading,
+.my-price-2 .btn {
+  background-color: #7CACED;
+  color: #fff;
+}
+.my-price-2 .glyphicon-ok {
+  color: #7CACED;
+}
+.my-price-3 .panel-heading,
+.my-price-3 .btn {
+  background-color: #44E7B9;
+  color: #fff;
+}
+.my-price-3 .glyphicon-ok {
+  color: #44E7B9;
+}
+.my-price-4 .panel-heading,
+.my-price-4 .btn {
+  background-color: #FF507C;
+  color: #fff;
+}
+.my-price-4 .glyphicon-ok {
+  color: #FF507C;
+}
