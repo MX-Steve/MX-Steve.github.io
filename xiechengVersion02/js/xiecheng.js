@@ -1,0 +1,73 @@
+/**
+ * Created by bjwsl-001 on 2017/4/18.
+ */
+
+bootlint.showLintReportForCurrentDocument([]);
+var app = angular.module('myApp',['ng']);
+app.controller('parentCtrl',['$scope','$http',function($scope,$http){
+    $scope.userLogin = function(){
+        $http
+            .get('data/login_in.php?uname='+$scope.uname+'&upwd='+$scope.upwd)
+            .success(function(data){
+                $('#myLogin').modal('hide');
+                $('.welcomeuser').css('display','block');
+                $('.phonewelcomuser').html($scope.uname);
+            });
+    };
+    $http.get('data/xc_model.php')
+        .success(function(data){
+            $scope.model=data;
+        });
+    $http.get('data/xc_sports.php')
+        .success(function(data){
+            $scope.sports=data[0];
+        });
+    $http.get('data/xc_carousel.php')
+        .success(function(data){
+            $scope.carousel=data[0];
+        });
+    $http.get('data/xc_subentry.php')
+        .success(function(data){
+            $scope.subentry=data;
+            //console.log($scope.subentry);
+        });
+}]);
+$("#nav_sub_01").css('display','block')
+    .siblings('.clear').css('display','none');
+var showOff = function(pid,id,rtMsg){
+    pid.children().css({
+        borderTopColor:"transparent",
+        borderBottomColor:"#fff",
+        marginTop:"-18px"
+    })
+        .parent().parent().siblings().find('i').css({
+        borderTopColor:"#fff",
+        borderBottomColor:"transparent",
+        marginTop:"-13px"
+    });
+    id.css('display','block')
+        .siblings('.clear').css('display','none');
+    $("#nav_sub_rt")
+        .html(rtMsg);
+}
+$("#nav_title_01").click(function(){
+    showOff($("#nav_title_01"),$("#nav_sub_01"),'酒店订单&gt;');
+});
+$("#nav_title_02").click(function(){
+    showOff($("#nav_title_02"),$("#nav_sub_02"),'旅游订单&gt;');
+});
+$("#nav_title_03").click(function(){
+    showOff($("#nav_title_03"),$("#nav_sub_03"),'机票订单&gt;');
+});
+$("#nav_title_04").click(function(){
+    showOff($("#nav_title_04"),$("#nav_sub_04"),'火车票订单&gt;');
+});
+$("#nav_title_05").click(function(){
+    showOff($("#nav_title_05"),$("#nav_sub_05"),'汽车票订单&gt;');
+});
+$("#nav_title_06").click(function(){
+    showOff($("#nav_title_06"),$("#nav_sub_06"),'用车票订单&gt;');
+});
+$("#nav_title_07").click(function(){
+    showOff($("#nav_title_07"),$("#nav_sub_07"),'门票票订单&gt;');
+});
