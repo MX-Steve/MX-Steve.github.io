@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/qqmusic.css">
+		<link rel="stylesheet" href="css/carousel.css"/>
+	</head>
+	<body>
+		<!-- 页面头部信息 -->
+		<header id="header">
+			<!-- qqmusic version1.0 log -->
+			<a href="#" class="logo">
+				<img src="images/logo.png" alt="">
+			</a>
+			<!-- 音乐馆-vip -->
+			<a href="#" class="musicHouse current">音乐馆</a>
+			<a href="#" class="myMusic">我的音乐</a>
+			<a href="musicdownload.html" class="download">下载客户端</a>
+			<a href="#" class="vip">VIP</a>
+			<div class="search">
+				<input type="text" class="search" placeholder="歌手" id="search">
+				<button class="btnSearch">
+					<i></i>
+				</button>
+				<div class="sub_search" id="sub_search">
+					<ul>
+						<li>
+							<dl>
+								<dt class="num lf">1</dt>
+								<dd class="song lf">成都</dd>
+								<dd class="count rt">23.4万</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="num lf">2</dt>
+								<dd class="song lf">三生三世十里桃花</dd>
+								<dd class="count rt">16万</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="num lf">3</dt>
+								<dd class="song lf">手机铃声</dd>
+								<dd class="count rt">14万</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="num lf">4</dt>
+								<dd class="song lf">铃声</dd>
+								<dd class="count rt">9.4万</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="num lf">5</dt>
+								<dd class="song lf">儿歌</dd>
+								<dd class="count rt">6.1万</dd>
+							</dl>
+						</li>
+					</ul>
+					<span class="lf">搜索历史</span>
+					<span class="rt"></span>
+				</div>
+			</div>
+			<a href="#" class="login" id="btLogin">登录</a>
+			<button class="greenDia">开通绿钻豪华版</button>
+			<button class="payBag">开通付费包</button>
+			<p id="welcome"></p>
+		</header>
+		<!-- 页面导航栏信息 -->
+		<nav id="nav">
+			<!-- ul列表 -->
+			<ul>
+				<li class="current">
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">歌手</a>
+				</li>
+				<li>
+					<a href="#">专辑</a>
+				</li>
+				<li>
+					<a href="#">排行榜</a>
+				</li>
+				<li>
+					<a href="qqmusicplayer.html">分类歌单</a>
+				</li>
+				<li>
+					<a href="#">MV</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- 页面新歌首发专区 -->
+		<div id="newSong" class="out">
+			<h1 class="newSong_head">新歌首发</h1>
+			<ul class="newSong_list">
+				<li class="current"><a href="#">全部</a></li>
+				<li><a href="#">华语</a></li>
+				<li><a href="#">欧美</a></li>
+				<li><a href="#">韩国</a></li>
+				<li><a href="#">日本</a></li>
+				<a href="#">全部&gt;</a>
+			</ul>
+			<ul class="newSong_picture">
+				<li class="newSong_picture_1 p1">
+					<a href="#">
+						<!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">《我们的挑战》新春歌会特辑</a></h3>
+					<p><a href="#">华语群星</a></p>
+				</li>
+				<li class="newSong_picture_1 p2">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">웃어 (笑)</a></h3>
+					<p><a href="#">브이오에스 (V.O.S)</a></p>
+				</li>
+				<li class="newSong_picture_1 p3">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">Happiness</a></h3>
+					<p><a href="#">SOLIDEMO</a></p>
+				</li>
+				<li class="newSong_picture_1 p4">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">SUPERMAN</a></h3>
+					<p><a href="#">水曜日のカンパネラ</a></p>
+				</li>
+				<li class="newSong_picture_1 p5">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">Chained To The Rhythm 更多</a></h3>
+					<p><a href="#">Katy Perry</a></p>
+				</li>
+				<li class="newSong_picture_1 p6">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">Fifty Shades Darker (Original Motion Picture Soundtrack)</a></h3>
+					<p><a href="#">Various Artists</a></p>
+				</li>
+				<li class="newSong_picture_1 p7">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">求爱歌</a></h3>
+					<p><a href="#">张玮</a></p>
+				</li>
+				<li class="newSong_picture_1 p8">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">回声</a></h3>
+					<p><a href="#">周深</a></p>
+				</li>
+				<li class="newSong_picture_1 p9">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">理智与感情</a></h3>
+					<p><a href="#">郑秀文</a></p>
+				</li>
+				<li class="newSong_picture_1 p10">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">回声</a></h3>
+					<p><a href="#">周深</a></p>
+				</li>
+				<li class="newSong_picture_1 p11">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">Pattern</a></h3>
+					<p><a href="#">SUPERBEE</a></p>
+				</li>
+				<li class="newSong_picture_1 p12">
+					<a href="#"><!-- 背景图片 -->
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3><a href="#">Fifty Shades Darker (Original Motion Picture Soundtrack)</a></h3>
+					<p><a href="#">Various Artists</a></p>
+				</li>
+			</ul> 
+		</div>
+		<!-- 页面精彩推荐专区 -->
+		<div id="recommend">
+			<h1 class="recommend_head">精彩推荐</h1>
+			<div class="J_Poster poster-main" data-setting='{
+                                               "width":1340,
+                                                "height":325,
+                                                "posterWidth":608,
+                                                "posterHeight":325,
+                                                "scale":0.8,
+                                                "verticalAlign":"middle",
+                                                "autoPlay":2000,
+                                                "speed":1000,
+                                                "delay":2000
+                                                 }'>
+        	<div class="poster-btn poster-prev-btn"></div>
+        	<ul class="poster-list">
+				<li class="poster-item"><a href="#"><img src="images/recommend/recommend_1.jpg"/></a></li>
+				<li class="poster-item"><a href="#"><img src="images/recommend/recommend_2.jpg"/></a></li>
+				<li class="poster-item"><a href="#"><img src="images/recommend/recommend_3.jpg"/></a></li>
+				<li class="poster-item"><a href="#"><img src="images/recommend/recommend_4.jpg"/></a></li>
+				<li class="poster-item"><a href="#"><img src="images/recommend/recommend_5.jpg"/></a></li>
+        	</ul>
+        	<div class="poster-btn poster-next-btn"></div>
+    	</div>
+
+		</div>
+		<!-- 页面排行榜专区 -->
+		<div id="ranking" class="out">
+			<h1 class="ranking_head">排行榜</h1>
+			<a href="#" class="rt">全部 &gt;</a>
+			<ul class="fashion">
+				<li class="fashion01">
+					<p>巅峰榜</p>
+					<h2>流行指数</h2>
+					<span></span>
+					<u class="play"><i></i></u><!-- 播放小图片 -->
+					<dl>
+						<dt><a href="#">1.成都(Like)</a></dt>
+						<dd><a href="#">赵雷</a></dd>
+						<dt><a href="#">2.小幸运(Like)</a></dt>
+						<dd><a href="#">薛之谦/在地球旅行的独角兽</a></dd>
+						<dt><a href="#">3.很奇怪我爱你(Like)</a></dt>
+						<dd><a href="#">张杰</a></dd>
+						<dt><a href="#">4.凉凉</a></dt>
+						<dd><a href="#">杨宗纬/张碧晨</a></dd>
+					</dl>
+				</li>
+				<li class="fashion02">
+					<p>巅峰榜</p>
+					<h2>热歌</h2>
+					<span></span>
+					<u class="play"><i></i></u><!-- 播放小图片 -->
+					<dl>
+						<dt><a href="#">1.好像遇见你</a></dt>
+						<dd><a href="#">李玉刚</a></dd>
+						<dt><a href="#">2.告白气球</a></dt>
+						<dd><a href="#">周杰伦</a></dd>
+						<dt><a href="#">3.三生三世</a></dt>
+						<dd><a href="#">张杰</a></dd>
+						<dt><a href="#">4.Complex(feat.G-D...)</a></dt>
+						<dd><a href="#">Zion.T (자이언티)</a></dd>
+					</dl>
+				</li>
+				<li class="fashion03">
+					<p>巅峰榜</p>
+					<h2>新歌</h2>
+					<span></span>
+					<u class="play"><i></i></u><!-- 播放小图片 -->
+					<dl>
+						<dt><a href="#">1.YESTERDAY</a></dt>
+						<dd><a href="#">Block B (블락비)</a></dd>
+						<dt><a href="#">2.回声</a></dt>
+						<dd><a href="#">周深</a></dd>
+						<dt><a href="#">3.Beauty and the Bea...</a></dt>
+						<dd><a href="#">Ariana Grande/John Leg</a></dd>
+						<dt><a href="#">4.I Don't</a></dt>
+						<dd><a href="#">Mariah Carey/YG</a></dd>
+					</dl>
+				</li>
+				<li class="fashion03">
+					<p>巅峰榜</p>
+					<h2>欧美</h2>
+					<span></span>
+					<u class="play"><i></i></u><!-- 播放小图片 -->
+					<dl>
+						<dt><a href="#">1.Run Up</a></dt>
+						<dd><a href="#">Major Lazer/PARTYNEXTD</a></dd>
+						<dt><a href="#">2.Love Me Better</a></dt>
+						<dd><a href="#">James Blunt</a></dd>
+						<dt><a href="#">3.Alone</a></dt>
+						<dd><a href="#">Alan Walker</a></dd>
+						<dt><a href="#">4.Scared To Be Lonely</a></dt>
+						<dd><a href="#">Martin Garrix/Dua Lipa</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<!-- 页面热门歌单发专区 -->
+		<div id="hotList">
+			<h1 class="hotList_head">热门歌单</h1>
+			<div class="leftchange">&lt;</div>
+			<div class="rightchange">&gt;</div>
+			<div class="hotlist_picture">
+				<ul>
+					<li class="hotlist01">
+						<a href="#">
+							<img src="images/hotlist/hotlist01.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">历年格莱美陪跑歌手：我们肯定参加了假颁奖 更多</a></h3>
+						<p><a href="#">播放量：83.0万</a></p>
+					</li>
+					<li class="hotlist02">
+						<a href="#">
+							<img src="images/hotlist/hotlist02.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">『元宵节快乐』花灯挂满天 吃汤圆闹良宵 更多</a></h3>
+						<p><a href="#">播放量：32.3万</a></p>
+					</li>
+					<li class="hotlist03">
+						<a href="#">
+							<img src="images/hotlist/hotlist03.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">你有没有这样几个闺蜜？ 更多</a></h3>
+						<p><a href="#">播放量：54.7万</a></p>
+					</li>
+					<li class="hotlist04">
+						<a href="#">
+							<img src="images/hotlist/hotlist04.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">调大音量，今天，我们只听摇滚！</a></h3>
+						<p><a href="#">播放量：23.8万</a></p>
+					</li>
+					<li class="hotlist05">
+						<a href="#">
+							<img src="images/hotlist/hotlist05.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">珍藏时刻：爱情电影原声带</a></h3>
+						<p><a href="#">播放量：100.9万</a></p>
+					</li>
+					<li class="hotlist06">
+						<a href="#">
+							<img src="images/hotlist/hotlist06.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">红酒般香醇的Blues 更多</a></h3>
+						<p><a href="#">播放量：2.6万</a></p>
+					</li>
+					<li class="hotlist07">
+						<a href="#">
+							<img src="images/hotlist/hotlist07.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">晚安魔咒：每一首歌都是一句深情的晚安 更多</a></h3>
+						<p><a href="#">播放量：18.0万</a></p>
+					</li>
+					<li class="hotlist08">
+						<a href="#">
+							<img src="images/hotlist/hotlist08.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">台湾21世纪最畅销专辑Top 10 更多</a></h3>
+						<p><a href="#">播放量：19.3万</a></p>
+					</li>
+					<li class="hotlist09">
+						<a href="#">
+							<img src="images/hotlist/hotlist09.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">欧美｜耐听不油腻的深度嗓音 更多</a></h3>
+						<p><a href="#">播放量：32.4万</a></p>
+					</li>
+					<li class="hotlist10">
+						<a href="#">
+							<img src="images/hotlist/hotlist10.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">一曲赵雷，染上叫民谣的瘾</a></h3>
+						<p><a href="#">播放量：81.4万</a></p>
+					</li>
+					<li class="hotlist11">
+						<a href="#">
+							<img src="images/hotlist/hotlist11.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">五光十色的婉转风情·萨克斯</a></h3>
+						<p><a href="#">播放量：4.9万</a></p>
+					</li>
+					<li class="hotlist12">
+						<a href="#">
+							<img src="images/hotlist/hotlist12.jpg" alt="" />
+							<u class="play"><i></i></u><!-- 播放小图片 -->
+						</a>
+						<h3><a href="#">【一月】“韩国唱将们回归曲目合集”</a></h3>
+						<p><a href="#">播放量：13.8万</a></p>
+					</li>
+				</ul>
+			</div>
+			<p class="picture_bar">
+				<a href="#" class="bar01 bar_active"></a>
+				<a href="#" class="bar02"></a>
+				<a href="#" class="bar03"></a>
+			</p>
+		</div>	
+		<!-- 页面MV首播专区 -->
+		<div id="MVshow" class="out">
+			<h1 class="MVshow_head">MV首播</h1>
+			<div class="MVshowlist">
+				<a href="#" class="current">全部</a>
+				<a href="#">内地</a>
+				<a href="#">港台</a>
+				<a href="#">欧美</a>
+				<a href="#">韩国</a>
+				<a href="#">日本</a>
+				<a href="#" class="rt">全部 &gt;</a>
+			</div>
+			<ul class="MVpicture">
+				<li>
+					<video id="mv02" src="images/newSong/vide02.mp4" preload="metadata"></video>
+					<a href="#">
+						<img src="images/mvshow/mvshow01.jpg" alt="" />
+						<u id="mv_play02" class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">Chained To The Rhythm</a>
+					</h3>
+					<p><a href="#">Katy Perry</a></p>
+					<i></i><span>3.8万</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow02.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">흠뻑</a>
+					</h3>
+					<p><a href="#">제이켠</a></p>
+					<i></i><span>1.8万</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow03.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">我们万岁</a>
+					</h3>
+					<p><a href="#">BBF</a></p>
+					<i></i><span>6053</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow04.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">낮에 뜨는 별</a>
+					</h3>
+					<p><a href="#">수호</a></p>
+					<i></i><span>3.8万</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow05.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">青い季節</a>
+					</h3>
+					<p><a href="#">大原櫻子</a></p>
+					<i></i><span>7401</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow06.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">Anymore</a>
+					</h3>
+					<p><a href="#">Goldfrapp</a></p>
+					<i></i><span>1.3万</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow07.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">John Wayne</a>
+					</h3>
+					<p><a href="#">Lady Gaga</a></p>
+					<i></i><span>5.9万</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/mvshow/mvshow08.jpg" alt="" />
+						<u class="play"><i></i></u><!-- 播放小图片 -->
+					</a>
+					<h3>
+						<a href="#">抽象图</a>
+					</h3>
+					<p><a href="#">郭修彧</a></p>
+					<i></i><span>4098</span>
+				</li>
+			</ul>
+		</div>
+		<!-- 页面底部信息 -->
+		<footer id="footer">
+			<div class="downloadApp clear">
+				<h4>下载QQ音乐客户端</h4>
+				<ul>
+					<li>
+						<i class="pc"></i><a href="#">PC版</a>
+					</li>
+					<li>
+						<i class="mac"></i><a href="#">Mac版</a>
+					</li>
+					<li>
+						<i class="android"></i><a href="#">Android版</a>
+					</li>
+					<li>
+						<i class="iphone"></i><a href="#">iphone版</a>
+					</li>
+				</ul>
+			</div>
+			<div class="specialGoods clear">
+				<h4>特色产品</h4>
+				<ul>
+					<li>
+						<i class="kSong"></i><a href="#">全民K歌</a>
+					</li>
+					<li>
+						<i class="superSound"></i><a href="#">Super Sound</a>
+					</li>
+					<li>
+						<i class="play"></i><a href="#">QPlay</a>
+					</li>
+					<li>
+						<a href="#">QQ音乐原创音乐平台</a>
+					</li>
+					<li>
+						<a href="#">上传视频</a>
+					</li>
+					<li>
+						<a href="#">车载互动</a>
+					</li>
+					<li>
+						<a href="#">QQ演出</a>
+					</li>
+				</ul>
+			</div>
+			<div class="cooperation clear">
+				<h4>合作链接</h4>
+				<ul>
+					<li>
+						<a href="#">CJE&M</a>
+					</li>
+					<li>
+						<a href="#">腾讯视频</a>
+					</li>
+					<li>
+						<a href="#">手机QQ空间</a>
+					</li>
+					<li>
+						<a href="#">最新版QQ</a>
+					</li>
+					<li>
+						<a href="#">腾讯交友广告</a>
+					</li>
+					<li>
+						<a href="#">电脑管家</a>
+					</li>
+					<li>
+						<a href="#">QQ浏览器</a>
+					</li>
+					<li>
+						<a href="#">画报</a>
+					</li>
+					<li>
+						<a href="#">黄钻活动</a>
+					</li>
+					<li>
+						<a href="#">星钻</a>
+					</li>
+					<li>
+						<a href="#">腾讯微云</a>
+					</li>
+					<li>
+						<a href="#">更多</a>
+					</li>
+				</ul>
+			</div>
+			<p>
+				<a href="#">关于腾讯</a>|
+				<a href="#">About tencent</a>|
+				<a href="#">用户服务协议</a>|
+				<a href="#">广告服务</a>|
+				<a href="#">腾讯招聘</a>|
+				<a href="#">客服中心</a>|
+				<a href="#">网站导航</a>
+			</p>
+			<p>
+				Copyright © 1998 - 2017 Tencent. 
+				<a href="#">All Rights Reserved.</a>
+			</p>
+			<p>
+				腾讯公司 <a href="#">版权所有</a> <a href="#">腾讯网络文化经营许可证</a>
+			</p>
+		</footer>
+		<div class="loginParent" id="loginParent">
+			<div id="login" style="height:376px;">
+				<span class="rt" id="btClose">X</span> 
+				<h1>登录/注册界面</h1>
+				<div class="loginson">
+					 用户名:<input type="text" id="uname" name="uname" placeholder="请输入用户名"><br />
+					 密&nbsp;码:<input type="password" id="upwd" name="upwd" placeholder="请输入密码"><br />
+					 <input type="submit" id="btn-login" class="btn1" value="登录">
+					 <input type="button" id="btn-register" class="btn2" value="注册">
+					<p class="alert"></p>
+				 </div>
+			 </div>
+		</div>
+		<!--祝福小框-->
+		<div class="NYwishes">
+			<h2>新年愿望墙</h2>
+			<div class="swiper-container">
+				<div  id="conts">
+					<div class="dm">
+						<!--d_screen start-->
+						<div class="d_screen">
+							<div class="d_mask"></div>
+							<div class="d_show">
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="send">
+				<div class="input">
+					<input id="reply-write" name="content" type="text" value="" placeholder="说出你的愿望" >
+				</div>
+				<div class="send-btn" >
+					<a onClick="send_reply2()">发送</a>
+				</div>
+			</div>
+		</div>
+		<script src="js/jq.js"></script>
+    	<script src="js/carousel.js"></script>
+		<script src="js/qqmusic.js"></script>
+	</body>
+</html>

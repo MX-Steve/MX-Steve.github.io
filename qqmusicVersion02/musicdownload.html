@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+	<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tencent" />
+    <meta name="Copyright" content="Tencent" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="音乐,歌曲,音乐下载" />
+    <title>音乐下载页</title>
+	<link rel="stylesheet" href="css/musicDownload.css">
+	</head>
+	<body>
+		<!--1 菜单栏部分 -->
+		<div class="row tt-header">
+			<div class="col-sm-2 col-xs-3">
+				<a href="#" class="tt-logo">音乐天堂</a>
+			</div>
+			<div class="col-sm-2 col-xs-3">
+				产品动态
+			</div>
+			<div class="col-sm-1 col-xs-3">
+				<a href="#">下载</a>
+			</div>
+			<div class="col-sm-2 col-sm-offset-1 col-xs-1">
+				<a href="#">PC版介绍</a>
+			</div>
+			<div class="col-sm-2 col-xs-1">
+				<a href="#">MAC版介绍</a>
+			</div>
+			<div class="col-sm-2 col-xs-1">
+				<a href="#">轻听介绍</a>
+			</div>
+		</div>
+		<!-- 右侧楼梯 -->
+		<div class="tt-side-bar">
+			<a href="#" class="tt-side-bar-01 current"></a>
+			<a href="#" class="tt-side-bar-02"></a>
+			<a href="#" class="tt-side-bar-03"></a>
+		</div>
+		<div>
+			<!--page01立即下载 -->
+			<div class="tt-side-menu-01">
+				<div class="col-xs-5">
+					<div class="watchTime">
+						<img class="watchTime-bg" src="downimg/watch_bg.png"/>
+						<div class="watchTime-numb" >
+							<img src="downimg/watch_numb.png"/>
+						</div>
+						<span class="watchTime-noodle"></span>
+					</div>
+				</div>
+				<div class="col-xs-7 text-center">
+					<h1>用pc听音乐，视觉更震撼</h1>
+					<h2>听歌60分钟，生活更精彩</h2>
+					<a href="#" class="tt-btn">立即下载</a>
+				</div>
+				<div class="col-xs-12 tt-bottom-tab">
+					<div class="row text-center">
+						<div class="col-xs-3">
+							<a href="#" class="pc active">
+							</a>
+						</div>
+						<div class="col-xs-3">
+							<a href="#" class="mac">
+
+							</a>
+						</div>
+						<div class="col-xs-3">
+							<a href="#" class="iphone">
+							</a>
+						</div>
+						<div class="col-xs-3">
+							<a href="#" class="android">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--page02社交互动 -->
+			<div class="tt-side-menu-02">
+				<div class="col-xs-12 col-sm-7 text-center">
+					<h1>社交互动</h1>
+					<h2>分享你的音乐感动</h2>
+				</div>
+				<div class="col-xs-12 col-sm-5">
+					<div class="phonebox">
+						<img style="width:300px;height:650px;" class="phonebox-bg"  src="downimg/synchro_phone.png"/>
+					</div>
+				</div>
+			</div>
+			<!--page03终端同步 -->
+			<div class="tt-side-menu-03">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="row">
+							<div class="col-xs-6 col-sm-12 text-center">
+								<h1>多终端云同步</h1>
+								<h1>切换音乐无极限</h1>
+								<h2>一个账号，随时畅想音乐</h2>
+							</div>
+							<div class="col-xs-6 col-sm-12 phone_pic">
+								<img src="downimg/synchro_phone.png" alt="手机版图片"/>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="row mac_pic">
+							<div class="col-xs-12">
+								<img src="downimg/synchro_mac1.png" alt="MAC版"/>
+							</div>
+							<div class="col-xs-12">
+								<img src="downimg/synchro_mac2.png" alt="MAC版"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jq.js"></script>
+		<script>
+			$('.tt-side-bar-01').click(function(e){
+				e.preventDefault();
+				$('.tt-side-bar-01').addClass('current')
+						.siblings().removeClass('current');
+				$('.tt-side-menu-01').css('opacity',1)
+						.siblings().css('opacity',0);
+			});
+			$('.tt-side-bar-02').click(function(e){
+				e.preventDefault();
+				$('.tt-side-bar-02').addClass('current')
+						.siblings().removeClass('current');
+				$('.tt-side-menu-02').css('opacity',1)
+						.siblings().css('opacity',0);
+				$('.phonebox').find('img').addClass('imgMove');
+			});
+			$('.tt-side-bar-03').click(function(e){
+				e.preventDefault();
+				$('.tt-side-bar-03').addClass('current')
+						.siblings().removeClass('current');
+				$('.tt-side-menu-03').css('opacity',1)
+						.siblings().css('opacity',0);
+			})
+			var menu01 = $('.tt-side-menu-01');
+			function funcTab(id,url,h1,h2){
+				id.addClass('active')
+						.parent().siblings().children().removeClass('active');
+				menu01.css('background',"url("+url+") 0 0 no-repeat");
+				menu01.find('h1').html(h1);
+				menu01.find('h2').html(h2);
+			}
+			$('.iphone').click(function(){
+				funcTab($('.iphone'),"downimg/banner_iphone.jpg",'百变播放器','不变好声音');
+				$('.watchTime').css('display:hidden;');
+				var num = 0;
+				var iphonePics=['iphone_play_1.jpg','iphone_play_2.jpg','iphone_play_3.jpg'];
+				picsChange = setInterval(function(){
+					menu01.css('backgroundImage','url(downimg/'+iphonePics[num]+')');
+					num++;
+					if(num>=3){
+						num = 0;
+					}
+				},3000);
+			});
+			$('.pc').click(function(){
+				$('.watchTime').css('display','block');
+				funcTab($('.pc'),"downimg/banner_pc.jpg",'用pc听音乐，视觉更震撼','听歌60分钟，生活更精彩');
+				clearInterval(picsChange);
+			});
+			$('.mac').click(function(){
+				$('.watchTime').css('display','none');
+				funcTab($('.mac'),"downimg/banner_mac.jpg",'急速下载','无网络也能听歌');
+				clearInterval(picsChange);
+			});
+			$('.android').click(function(){
+				$('.watchTime').css('display:none');
+				funcTab($('.android'),"downimg/banner_android.jpg",'歌词天地','用音乐记录生活');
+				clearInterval(picsChange);
+			});
+		</script>
+	</body>
+</html>
