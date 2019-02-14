@@ -71,12 +71,12 @@
 		
 	</div>
 </div>
-<div id="bdtts_div_id">
+<!--<div id="bdtts_div_id">
     <audio id="tts_autio_id" autoplay="autoplay">
       <source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;spd=5&amp;per=1&amp;text=请输入文字" type="audio/mpeg">
       <embed id="tts_embed_id" height="0" width="0" src="">
     </audio>
-</div>
+</div>-->
 <script type="text/javascript">
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
@@ -130,14 +130,9 @@ if (!document.createElement('canvas').getContext) {
 
 
 一别之后，二地相悬。虽说是三四月，谁又知五六年。七弦琴无心弹，八行书无可传，九连环从中折断，十里长亭望眼欲穿。百思想，千系念，万般无奈把卿怨;万语千言道不完，百无聊赖十凭栏。重九登高看孤雁，八月中秋月圆人不圆。七月半，秉烛烧香问苍天，六月伏天人人摇扇我心寒。五月榴花似火，偏遇阵阵冷雨浇花端。四月枇杷未黄，我欲对镜心意乱。忽匆匆，三月桃花随水转，飘零零，二月风筝线儿断。叹复叹，一月里，朔风如割冰河雪飘声声慢;" 
-	var ttsDiv = document.getElementById('bdtts_div_id');
-	var au1 = '<audio id="tts_autio_id" autoplay="autoplay">';
-	var sss = '<source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&per=3&spd=5&text=' + str + '" type="audio/mpeg">';	
-	var eee = '<embed id="tts_embed_id" height="0" width="0" src="">';
-	var au2 = '</audio>';
-	ttsDiv.innerHTML = au1 + sss + eee + au2;
-        ttsAudio = document.getElementById('tts_autio_id');
-        ttsAudio.play();
+	var msg = new SpeechSynthesisUtterance(str)
+	console.log(msg);
+	window.speechSynthesis.speak(msg);
 	}
 	setTimeout(tishi,10000)
 }
